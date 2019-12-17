@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_azul"
     android:layout_height="match_parent"
     tools:context=".ClientSearch">
 
@@ -13,6 +13,7 @@
         android:layout_height="36dp"
         android:layout_marginTop="20dp"
         android:queryHint="Buscar"
+        android:elevation="10dp"
         android:background="@drawable/btn_bordeado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
