@@ -28,8 +28,8 @@
         android:layout_height="39dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/btn_bordeado_verde"
-        android:text="Iniciar Sesión"
         android:elevation="10dp"
+        android:text="Iniciar Sesión"
         android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,13 +41,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@drawable/btn_bordeado"
+        android:drawableLeft="@drawable/ic_contrasena"
+        android:elevation="10dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Contraseña"
-        android:drawableLeft="@drawable/ic_contrasena"
         android:inputType="textPassword"
-        android:padding="5dip"
-        android:elevation="10dp"
+        android:padding="10dip"
         android:textColorHint="@color/Black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,14 +59,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:background="@drawable/btn_bordeado"
+        android:drawableLeft="@drawable/ic_persona"
         android:drawablePadding="5dip"
-        android:ems="10"
         android:elevation="10dp"
+        android:ems="10"
         android:gravity="center"
         android:hint="Usuario"
-        android:drawableLeft="@drawable/ic_persona"
         android:inputType="textPersonName"
-        android:padding="5dip"
+        android:padding="10dip"
         android:textColorHint="@color/Black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" /> />
+        app:layout_constraintGuide_end="205dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="366dp" />
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
