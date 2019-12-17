@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
@@ -32,7 +32,7 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
@@ -68,7 +68,7 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <TextView
-        android:id="@+id/tvTelefonos"
+        android:id="@+id/tvTel_01"
         android:layout_width="250dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
@@ -92,15 +92,39 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Telefonos"
+        android:text="Tel.Principal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <TextView
+        android:id="@+id/tvTel_02"
+        android:layout_width="250dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText5"
+        app:layout_constraintTop_toBottomOf="@+id/tvTel_01" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="130dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Tel. Secundario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <TextView
         android:id="@+id/tvNegocio"
@@ -111,42 +135,18 @@
         android:layout_marginEnd="10dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/tvTelefonos" />
+        app:layout_constraintStart_toEndOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/tvTel_02" />
 
     <EditText
-        android:id="@+id/editText5"
-        android:layout_width="100dp"
+        android:id="@+id/editText6"
+        android:layout_width="130dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Negocio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <TextView
-        android:id="@+id/tvCorreo"
-        android:layout_width="250dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/tvNegocio" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="100dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
@@ -161,5 +161,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="250dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/tvNegocio" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="130dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Correo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
