@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PickingApp</string>
+    <string name="error_messages">Errores de inicio de sesión</string>
+    <string name="login_message">Iniciar Sesión</string>
+    <string name="pass">Contraseña</string>
+    <string name="user">Usuario</string>
+    <string name="logo_description">Logo Distribuidora Mayorista del Cauca</string>
 </resources>

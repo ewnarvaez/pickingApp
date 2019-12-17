@@ -8,19 +8,19 @@
     android:foregroundGravity="center"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
+        android:layout_width="248dp"
+        android:layout_height="198dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:scaleType="center"
-
         android:src="@mipmap/logo_mayorista_del_cauca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_description"
+        />
 
     <Button
         android:id="@+id/btnLogin"
@@ -31,7 +31,7 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/btn_bordeado_verde"
         android:elevation="10dp"
-        android:text="Iniciar Sesión"
+        android:text="@string/login_message"
         android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,19 +46,21 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/btn_bordeado"
-        android:drawableLeft="@drawable/ic_contrasena"
+        android:drawableStart="@drawable/ic_contrasena"
         android:drawablePadding="-25dip"
         android:elevation="10dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Contraseña"
+        android:hint="@string/pass"
         android:inputType="textPassword"
         android:padding="05dip"
         android:textColorHint="@color/Gray"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/etUserName"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/etUserName"
@@ -68,19 +70,21 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/btn_bordeado"
-        android:drawableLeft="@drawable/ic_persona"
+        android:drawableStart="@drawable/ic_persona"
         android:drawablePadding="-25dip"
         android:elevation="10dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Usuario"
+        android:hint="@string/user"
         android:inputType="textPersonName"
         android:padding="5dip"
         android:textColorHint="@color/Gray"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/tvErrors"
@@ -89,7 +93,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
-        android:text="Errores de inicio de sesión"
+        android:text="@string/error_messages"
         android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +127,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
-    />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
