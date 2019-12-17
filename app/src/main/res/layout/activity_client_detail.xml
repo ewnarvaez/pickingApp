@@ -10,20 +10,22 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:ems="10"
         android:padding="5dip"
+        android:drawableLeft="@drawable/ic_persona"
         android:inputType="textPersonName"
         android:text="Cliente:"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDetalle" />
 
     <TextView
         android:id="@+id/tvNombreCliente"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="50dp"
@@ -36,19 +38,21 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Documento:"
+        android:drawableLeft="@drawable/ic_documento"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <TextView
         android:id="@+id/tvDocumento"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
@@ -61,7 +65,7 @@
 
     <TextView
         android:id="@+id/tvCiudad"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
@@ -74,19 +78,21 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Ciudad"
+        android:drawableLeft="@drawable/ic_ciudad"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <TextView
         android:id="@+id/tvTel_01"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
@@ -99,19 +105,21 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_telefono_01"
         android:text="Tel. Principal"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
     <TextView
         android:id="@+id/tvTel_02"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
@@ -124,19 +132,21 @@
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_telefono_02"
         android:text="Tel. Secundario"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <TextView
         android:id="@+id/tvNegocio"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
@@ -149,12 +159,14 @@
 
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_negocio"
         android:text="Negocio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
@@ -169,6 +181,7 @@
         android:gravity="center"
         android:text="Detalles del Cliente"
         android:textSize="25dp"
+        android:textStyle="bold"
         android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -176,7 +189,7 @@
 
     <TextView
         android:id="@+id/tvCorreo"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
@@ -189,13 +202,15 @@
 
     <EditText
         android:id="@+id/editText7"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Correo"
+        android:drawableLeft="@drawable/ic_correo"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
