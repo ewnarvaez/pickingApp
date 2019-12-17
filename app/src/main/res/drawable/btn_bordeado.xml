@@ -5,12 +5,13 @@
         android:radius="10dp" />
 
     <solid
+        android:color="@color/White"
 
         />
 
     <stroke
         android:dashWidth="5dp"
-        android:color="@color/White"
+        android:color="@color/Gray"
 
         android:width="2dp" />/stroke>
 
