@@ -10,7 +10,7 @@
 
     <stroke
         android:dashWidth="5dp"
-        android:color="@color/Black"
+        android:color="@color/White"
 
         android:width="2dp" />/stroke>
 
