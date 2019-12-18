@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/fondo_azul"
+    android:orientation="vertical"
     tools:context=".ClientDetailActivity">
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        android:ems="10"
-        android:padding="5dip"
         android:drawableLeft="@drawable/ic_persona"
-        android:inputType="textPersonName"
-        android:text="Cliente:"
+        android:ems="10"
         android:gravity="center"
+        android:inputType="textPersonName"
+        android:padding="5dip"
+        android:text="Cliente:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDetalle" />
 
@@ -36,17 +36,17 @@
         app:layout_constraintStart_toEndOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/tvDetalle" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText2"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_documento"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="Documento:"
-        android:drawableLeft="@drawable/ic_documento"
-        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -76,17 +76,17 @@
         app:layout_constraintStart_toEndOf="@+id/editText3"
         app:layout_constraintTop_toBottomOf="@+id/tvDocumento" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText3"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_ciudad"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="Ciudad"
-        android:drawableLeft="@drawable/ic_ciudad"
-        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -103,17 +103,17 @@
         app:layout_constraintStart_toEndOf="@+id/editText4"
         app:layout_constraintTop_toBottomOf="@+id/tvCiudad" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText4"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:drawableLeft="@drawable/ic_telefono_01"
-        android:text="Tel. Principal"
+        android:ems="10"
         android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Tel. Principal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
@@ -130,17 +130,17 @@
         app:layout_constraintStart_toEndOf="@+id/editText5"
         app:layout_constraintTop_toBottomOf="@+id/tvTel_01" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText5"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:drawableLeft="@drawable/ic_telefono_02"
-        android:text="Tel. Secundario"
+        android:ems="10"
         android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Tel. Secundario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -157,16 +157,16 @@
         app:layout_constraintStart_toEndOf="@+id/editText6"
         app:layout_constraintTop_toBottomOf="@+id/tvTel_02" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText6"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:gravity="center"
         android:drawableLeft="@drawable/ic_negocio"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
         android:text="Negocio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
@@ -180,9 +180,9 @@
         android:layout_marginEnd="10dp"
         android:gravity="center"
         android:text="Detalles del Cliente"
+        android:textColor="@color/White"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -200,17 +200,17 @@
         app:layout_constraintStart_toEndOf="@+id/editText7"
         app:layout_constraintTop_toBottomOf="@+id/tvNegocio" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText7"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_correo"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="Correo"
-        android:drawableLeft="@drawable/ic_correo"
-        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
