@@ -5,4 +5,5 @@
     <string name="pass">Contraseña</string>
     <string name="user">Usuario</string>
     <string name="logo_description">Logo Distribuidora Mayorista del Cauca</string>
+    <string name="client">Cliente</string>
 </resources>
