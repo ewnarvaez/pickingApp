@@ -19,10 +19,9 @@
         android:gravity="center"
         android:inputType="textPersonName"
         android:padding="5dip"
-        android:text="Cliente"
+        android:text="@string/client"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetalle"
-        tools:text="@string/client" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDetalle" />
 
     <TextView
         android:id="@+id/tvNombreCliente"
