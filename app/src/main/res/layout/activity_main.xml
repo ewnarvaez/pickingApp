@@ -107,7 +107,7 @@
         android:orientation="vertical"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_begin="206dp" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
