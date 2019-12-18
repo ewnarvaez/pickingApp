@@ -12,30 +12,28 @@
         android:id="@+id/editText"
         android:layout_width="170dp"
         android:layout_height="46dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
         android:drawableStart="@drawable/ic_persona"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:padding="5dip"
         android:text="@string/client"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetalle" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
         android:id="@+id/tvNombreCliente"
         android:layout_width="200dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
         android:text=""
         android:textColor="@color/White"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetalle" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
         android:id="@+id/editText2"
@@ -45,10 +43,10 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_documento"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:text="@string/document"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -86,10 +84,10 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_ciudad"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:text="@string/city"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -114,10 +112,10 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_telefono_01"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:text="@string/main_phone"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
@@ -142,10 +140,10 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_telefono_02"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:text="@string/secondary_phone"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -170,10 +168,10 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_negocio"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:text="@string/business"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
@@ -181,17 +179,15 @@
         android:id="@+id/tvDetalle"
         android:layout_width="250dp"
         android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
         android:gravity="center"
         android:text="@string/customer_details"
         android:textColor="@color/White"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <TextView
         android:id="@+id/tvCorreo"
@@ -214,11 +210,61 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_correo"
         android:ems="10"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:gravity="center"
         android:text="@string/mail"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="140dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="186dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
