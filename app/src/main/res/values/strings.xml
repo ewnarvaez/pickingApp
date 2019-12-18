@@ -6,4 +6,11 @@
     <string name="user">Usuario</string>
     <string name="logo_description">Logo Distribuidora Mayorista del Cauca</string>
     <string name="client">Cliente</string>
+    <string name="document">Documento</string>
+    <string name="city">Ciudad</string>
+    <string name="main_phone">Telefono Principal</string>
+    <string name="secondary_phone">Telefono Secundario</string>
+    <string name="business">Negocio</string>
+    <string name="mail">Correo</string>
+    <string name="customer_details">Detalles del Cliente</string>
 </resources>
