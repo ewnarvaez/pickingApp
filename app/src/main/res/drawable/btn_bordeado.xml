@@ -6,20 +6,12 @@
 
     <solid
         android:color="@color/White"
-
         />
 
     <stroke
         android:dashWidth="5dp"
         android:color="@color/Gray"
-
-        android:width="2dp" />/stroke>
-
-    <size android:width="120dp" android:height="120dp"></size>
-
-
-
-
+        android:width="2dp" />
 
     <size
         android:width="170dp"
