@@ -15,7 +15,6 @@
         android:drawableStart="@drawable/ic_persona"
         android:ems="10"
         android:gravity="center"
-        android:padding="5dip"
         android:text="@string/client"
         android:textSize="18sp"
         android:textStyle="bold"
