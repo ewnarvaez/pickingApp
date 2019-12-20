@@ -13,4 +13,9 @@
     <string name="business">Negocio</string>
     <string name="mail">Correo</string>
     <string name="customer_details">Detalles del Cliente</string>
+    <string name="name">Nombre</string>
+    <string name="surname">Apellido</string>
+    <string name="phone_number">Numero Telefonico</string>
+    <string name="everything">Todo</string>
+    <string name="cell_phone_number">Numero Celular</string>
 </resources>
