@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/fondo_azul"
     android:layout_height="match_parent"
-    tools:context=".ClientSearch">
+    tools:context=".ClientSearchActivity">
 
     <SearchView
         android:id="@+id/svBuscar"
