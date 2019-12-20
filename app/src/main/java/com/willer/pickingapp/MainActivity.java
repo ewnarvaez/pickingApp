@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if ((etUser.getText().toString().trim()).equals("mayorista") ) {
-                    if (etPass.getText().toString().trim() == "mayorista") {
-                        intent = new Intent(getApplicationContext(), ClientDetailActivity.class);
+                    if (etPass.getText().toString().trim().equals("mayorista")) {
+                        intent = new Intent(getApplicationContext(), ClientSearchActivity.class);
                         startActivity(intent);
                     } else {
                         tvErrors.setText("La contraseña no coincide con la registrada en la base de datos");
