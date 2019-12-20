@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if ((etUser.getText().toString().trim()).equals("mayorista") ) {
-                    if (etPass.getText().toString().trim().equals("mayorista")) {
+                if ((etUser.getText().toString().trim()).equals("mmmm") ) {
+                    if (etPass.getText().toString().trim().equals("1234")) {
                         intent = new Intent(getApplicationContext(), ClientSearchActivity.class);
                         startActivity(intent);
                     } else {
