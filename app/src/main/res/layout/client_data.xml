@@ -1,66 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="406dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/fondo"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imagen_contacto"
-            android:layout_width="match_parent"
-            android:layout_height="141dp"
-            android:contentDescription="@string/everything" />
-
-        <TextView
-            android:id="@+id/contacto_nombre"
-            android:layout_width="match_parent"
-            android:textColor="@color/White"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:text=""
-            tools:text="@string/name" />
-
-        <TextView
-            android:id="@+id/contacto_numero_telefonico_00"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_sin_bordes"
-            android:drawableStart="@drawable/ic_telefono_02"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text=""
-            tools:text="@string/cell_phone_number" />
-
-        <TextView
-            android:id="@+id/contacto_numero_telefonico_01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_telefono_01"
-            android:text=""
-            android:padding="10dip"
-            android:background="@drawable/btn_sin_bordes"
-            android:gravity="center"
-            tools:text="@string/phone_number" />
-
-        <TextView
-            android:id="@+id/contacto_correo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_sin_bordes"
-            android:drawableStart="@drawable/ic_correo"
-            android:gravity="center"
-            android:text=""
-            android:padding="10dip"
-            tools:text="@string/mail" />
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
 
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
 
-</androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/contactos_imagen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/logo_contactos"
+                    android:src="@mipmap/contactos" />
+
+                <TextView
+                    android:id="@+id/contactos_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/contactos_nombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-353sp"
+                    android:layout_marginTop="20sp"
+                    tools:text="@string/phone_number" />
+
+
+            </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

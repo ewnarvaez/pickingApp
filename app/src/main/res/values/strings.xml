@@ -18,4 +18,5 @@
     <string name="phone_number">Numero Telefonico</string>
     <string name="everything">Todo</string>
     <string name="cell_phone_number">Numero Celular</string>
+    <string name="logo_contactos">Logo de Contactos</string>
 </resources>
