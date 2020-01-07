@@ -2,13 +2,14 @@ package com.willer.pickingapp.model;
 
 public class Client {
 
-    private  int id;
+    private int id;
     private String name;
     private String dni;
     private String city;
     private String mainPhoneNumber;
     private String secondPhoneNumber;
     private String Company;
+    private String email;
 
     public Client() {
     }
@@ -87,8 +88,5 @@ public class Client {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    private String email;
-
 
 }
