@@ -87,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Clients creation in database
         DatabaseHandler db = new DatabaseHandler(MainActivity.this);
-        db.addClient(duber);
-        db.addClient(erwin);
-        db.addClient(felipe);
-        db.addClient(edwin);
+//        db.addClient(duber);
+//        db.addClient(erwin);
+//        db.addClient(felipe);
+//        db.addClient(edwin);
 
         // Update a client
         Client c = db.getClient(4);
