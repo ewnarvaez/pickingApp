@@ -1,6 +1,8 @@
 package com.willer.pickingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,9 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.willer.pickingapp.adapter.RecyclerViewAdapter;
 import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Client;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView tvErrors;
     Intent intent;
+
+
     private static final String TAG = "MainActivity";
 
     @Override
@@ -33,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         etPass = (EditText) findViewById(R.id.etPass);
         tvErrors = (TextView) findViewById(R.id.tvErrors);
         btnLogin = (Button) findViewById(R.id.btnLogin);
+
+
+        // Setup adapter
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Clients creation in database
         DatabaseHandler db = new DatabaseHandler(MainActivity.this);
-//        db.addClient(duber);
-//        db.addClient(erwin);
-//        db.addClient(felipe);
-//        db.addClient(edwin);
+        db.addClient(duber);
+        db.addClient(erwin);
+        db.addClient(felipe);
+        db.addClient(edwin);
 
         // Update a client
         Client c = db.getClient(4);
@@ -92,11 +101,5 @@ public class MainActivity extends AppCompatActivity {
         // Delete a client
         //db.deleteClient(c);
 
-
-        // List all clients
-        List<Client> clientList = db.getAllClients();
-        for (Client client: clientList) {
-            Log.d("Client List", "onCreate: " + client.getName() + ", " + client.getCity());
-        }
     }
 }

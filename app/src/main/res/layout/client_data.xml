@@ -24,7 +24,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/contactos_imagen"
+                    android:id="@+id/clientImage"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -32,13 +32,13 @@
                     android:src="@mipmap/contactos" />
 
                 <TextView
-                    android:id="@+id/contactos_nombre"
+                    android:id="@+id/clientName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/name" />
 
                 <TextView
-                    android:id="@+id/contactos_nombres"
+                    android:id="@+id/clientMainPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="-353sp"
