@@ -1,6 +1,7 @@
 package com.willer.pickingapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.willer.pickingapp.ClientDetailActivity;
 import com.willer.pickingapp.R;
 import com.willer.pickingapp.model.Client;
 
@@ -48,7 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return clientList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView clientName;
         public TextView clientMainPhone;
@@ -56,8 +58,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(this);
             clientName = itemView.findViewById(R.id.clientName);
             clientMainPhone = itemView.findViewById(R.id.clientMainPhone);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            int position = getAdapterPosition(); // Function that get the item position in the arrayList
+            Client client = clientList.get(position); // Get every one client object
+            // Intent creation
+            Intent intent = new Intent(context, ClientDetailActivity.class);
+            intent.putExtra("name", client.getName());
+            intent.putExtra("dni", client.getDni());
+            intent.putExtra("city", client.getCity());
+            intent.putExtra("mainPhone", client.getMainPhoneNumber());
+            intent.putExtra("secondPhone", client.getSecondPhoneNumber());
+            intent.putExtra("company", client.getCompany());
+            intent.putExtra("email", client.getEmail());
+
+            // Sending the intent
+            context.startActivity(intent);
         }
     }
 }
