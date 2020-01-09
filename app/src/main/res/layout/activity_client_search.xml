@@ -13,7 +13,6 @@
         android:layout_height="0dp"
         android:background="@drawable/btn_bordeado"
         android:elevation="10dp"
-        android:queryHint="Buscar"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline"

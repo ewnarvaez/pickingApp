@@ -5,19 +5,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.SearchView;
 
 import com.willer.pickingapp.adapter.RecyclerViewAdapter;
 import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Client;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientSearchActivity extends AppCompatActivity {
+public class ClientSearchActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     private ArrayList<Client> clientArrayList;
+    private SearchView searchView;
 
 
     @Override
@@ -30,6 +34,10 @@ public class ClientSearchActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         clientArrayList = new ArrayList<>();
 
+        searchView = findViewById(R.id.svBuscar);
+        searchView.setQueryHint("Buscar Cliente");
+        searchView.setOnQueryTextListener(this);
+
         DatabaseHandler db = new DatabaseHandler(ClientSearchActivity.this);
 
         // List all clients
@@ -41,5 +49,17 @@ public class ClientSearchActivity extends AppCompatActivity {
         recyclerViewAdapter = new RecyclerViewAdapter(ClientSearchActivity.this, clientArrayList);
 
         recyclerView.setAdapter(recyclerViewAdapter);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+
+        String text = newText;
+        return false;
     }
 }
