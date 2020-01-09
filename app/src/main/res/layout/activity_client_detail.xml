@@ -9,6 +9,20 @@
     tools:context=".ClientDetailActivity">
 
 
+    <ImageView
+        android:id="@+id/fondo_blanco"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline21">
+
+    </ImageView>
+
+
     <TextView
         android:id="@+id/tvDetalle"
         android:layout_width="0dp"
@@ -44,7 +58,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -71,7 +85,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -83,7 +97,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -110,7 +124,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -137,7 +151,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -164,7 +178,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline32"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -193,7 +207,7 @@
         android:layout_height="0dp"
         android:text=""
         android:gravity="center"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline34"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -462,5 +476,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

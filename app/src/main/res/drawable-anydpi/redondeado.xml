@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners
+        android:radius="20sp" />
+
+    <solid
+        android:color="@color/White"
+        />
+
+    <stroke
+        android:dashWidth="5dp"
+        android:color="@color/Gray"
+        android:width="2dp" />
+
+    <size
+        android:width="20sp"
+        android:height="20sp" />
+
+</shape>
