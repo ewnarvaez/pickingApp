@@ -1,11 +1,13 @@
 package com.willer.pickingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.SearchView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.willer.pickingapp.adapter.RecyclerViewAdapter;
 import com.willer.pickingapp.data.DatabaseHandler;
@@ -16,12 +18,11 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientSearchActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class ClientSearchActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     private ArrayList<Client> clientArrayList;
-    private SearchView searchView;
 
 
     @Override
@@ -33,10 +34,6 @@ public class ClientSearchActivity extends AppCompatActivity implements SearchVie
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         clientArrayList = new ArrayList<>();
-
-        searchView = findViewById(R.id.svBuscar);
-        searchView.setQueryHint("Buscar Cliente");
-        searchView.setOnQueryTextListener(this);
 
         DatabaseHandler db = new DatabaseHandler(ClientSearchActivity.this);
 
@@ -52,14 +49,23 @@ public class ClientSearchActivity extends AppCompatActivity implements SearchVie
     }
 
     @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
+    public boolean onCreateOptionsMenu(Menu menu) {
 
-    @Override
-    public boolean onQueryTextChange(String newText) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        MenuItem item = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
-        String text = newText;
-        return false;
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 }
