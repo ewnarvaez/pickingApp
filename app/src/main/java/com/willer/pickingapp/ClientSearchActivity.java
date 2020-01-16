@@ -16,6 +16,7 @@ import com.willer.pickingapp.model.Client;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class ClientSearchActivity extends AppCompatActivity {
@@ -23,7 +24,8 @@ public class ClientSearchActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     private ArrayList<Client> clientArrayList;
-
+    // List all clients
+    List<Client> clientList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,7 @@ public class ClientSearchActivity extends AppCompatActivity {
 
         DatabaseHandler db = new DatabaseHandler(ClientSearchActivity.this);
 
-        // List all clients
-        List<Client> clientList = db.getAllClients();
+        clientList = db.getAllClients();
         for (Client client: clientList) {
             clientArrayList.add(client);
         }
@@ -62,6 +63,8 @@ public class ClientSearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+
+                recyclerViewAdapter.getFilter().filter(newText);
                 return false;
             }
         });

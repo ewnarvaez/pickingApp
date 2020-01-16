@@ -2,28 +2,35 @@ package com.willer.pickingapp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Filter;
+import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.willer.pickingapp.ClientDetailActivity;
 import com.willer.pickingapp.R;
+import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Client;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements Filterable {
 
     private Context context;
-    private List<Client> clientList;
+    private List<Client> clientArrayList;
 
     public RecyclerViewAdapter(Context context, List<Client> clientList) {
         this.context = context;
-        this.clientList = clientList;
+        this.clientArrayList = clientList;
     }
 
     @NonNull
@@ -39,7 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Client client = clientList.get(position);
+        Client client = clientArrayList.get(position);
         holder.clientName.setText(client.getName());
         holder.clientMainPhone.setText(client.getMainPhoneNumber());
     }
@@ -47,7 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
 
-        return clientList.size();
+        return clientArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -66,8 +73,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         @Override
         public void onClick(View v) {
 
-            int position = getAdapterPosition(); // Function that get the item position in the arrayList
-            Client client = clientList.get(position); // Get every one client object
+            int position = getAdapterPosition(); // Function that get the item position in the List
+            Client client = clientArrayList.get(position); // Get every one client object
             // Intent creation
             Intent intent = new Intent(context, ClientDetailActivity.class);
             intent.putExtra("name", client.getName());
@@ -82,4 +89,43 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             context.startActivity(intent);
         }
     }
+
+    @Override
+    public Filter getFilter() {
+
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+
+            DatabaseHandler db = new DatabaseHandler(context.getApplicationContext());
+            List<Client> filteredList = new ArrayList<>();
+            if (charSequence.toString().isEmpty()) {
+                filteredList = db.getAllClients();
+            } else {
+                for (Client client: clientArrayList) {
+
+                    if (client.getName().toLowerCase().contains(charSequence.toString().toLowerCase())) {
+
+                        filteredList.add(client);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filteredList;
+
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+
+            clientArrayList.clear();
+            clientArrayList.addAll((Collection<? extends Client>) results.values);
+            notifyDataSetChanged();
+        }
+    };
 }
