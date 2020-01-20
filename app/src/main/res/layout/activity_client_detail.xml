@@ -15,10 +15,10 @@
         android:layout_height="0dp"
         android:contentDescription="@string/logo_description"
         android:src="@drawable/fondo_blanco"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline21">
+        app:layout_constraintTop_toBottomOf="@+id/tvDetalle">
 
     </ImageView>
 
