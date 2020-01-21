@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".ClientDetailActivity"></activity>
+        <activity android:name=".ClientSearchActivity" />
+        <activity android:name=".ClientDetailActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ClientSearchActivity">
+        <activity android:name=".BottomNavigationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

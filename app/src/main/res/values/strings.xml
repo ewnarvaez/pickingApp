@@ -20,4 +20,11 @@
     <string name="cell_phone_number">Numero Celular</string>
     <string name="logo_contactos">Logo de Contactos</string>
     <string name="search_title">Buscar</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_order">Pedido</string>
+    <string name="title_update">Actualizar</string>
 </resources>
