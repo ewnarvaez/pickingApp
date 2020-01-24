@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_azul"
-    android:orientation="vertical"
-    tools:context=".ClientDetailActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_azul">
 
 
     <ImageView
@@ -15,20 +13,20 @@
         android:layout_height="0dp"
         android:contentDescription="@string/logo_description"
         android:src="@drawable/fondo_blanco"
-        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintBottom_toTopOf="@+id/guideline35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetalle">
+        app:layout_constraintTop_toBottomOf="@+id/tvEdit">
 
     </ImageView>
 
 
     <TextView
-        android:id="@+id/tvDetalle"
+        android:id="@+id/tvEdit"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="@string/customer_details"
+        android:text="@string/edit_user"
         android:textColor="@color/White"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -93,7 +91,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvCiudad"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -121,7 +119,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvTel_01"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -149,7 +147,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvTel_02"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -177,7 +175,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvNegocio"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -207,7 +205,7 @@
 
 
 
-    <TextView
+    <EditText
         android:id="@+id/tvCorreo"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -234,6 +232,35 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline33" />
+
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_bordeado_verde"
+        android:elevation="10dp"
+        android:text="@string/title_update"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline37"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline36" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_bordeado_verde"
+        android:elevation="10dp"
+        android:text="@string/cancel"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline37"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline36" />
 
     <!-- CUADRICULA DE GUIAS VERTICALES -->
 
@@ -496,18 +523,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.96" />
+        app:layout_constraintGuide_percent="0.92" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/state"
-        android:textSize="20sp"
-        android:textColorLink="@color/Blue"
-        app:layout_constraintBottom_toTopOf="@+id/guideline36"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="@+id/guideline35" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
