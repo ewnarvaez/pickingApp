@@ -27,4 +27,7 @@
     <string name="title_search">Buscar</string>
     <string name="title_order">Pedido</string>
     <string name="title_update">Actualizar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
