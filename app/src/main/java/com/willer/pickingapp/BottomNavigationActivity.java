@@ -3,8 +3,12 @@ package com.willer.pickingapp;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.willer.pickingapp.ui.Order.OrderFragment;
+import com.willer.pickingapp.ui.searchClient.SearchFragment;
+import com.willer.pickingapp.ui.updateClient.UpdateFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -12,7 +16,11 @@ import androidx.navigation.ui.NavigationUI;
 
 public class BottomNavigationActivity extends AppCompatActivity {
 
-
+    private BottomNavigationView bottomNavigationView;
+    private Fragment fragment;
+    private OrderFragment orderFragment;
+    private SearchFragment searchFragment;
+    private UpdateFragment updateFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
