@@ -1,7 +1,6 @@
 package com.willer.pickingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.willer.pickingapp.R.id.btnupdate_user;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class ClientDetailActivity extends AppCompatActivity implements View.OnClickListener {
+public class ClientEditActivity extends AppCompatActivity {
 
     private TextView tvName;
     private TextView tvDNI;
@@ -20,14 +19,12 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
     private TextView tvSecondaryPhone;
     private TextView tvCompany;
     private TextView tvEmail;
-    private Button btnupdate_user;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_detail);
-        Referenciar();
 
         tvName = findViewById(R.id.tvNombreCliente);
         tvDNI = findViewById(R.id.tvDocumento);
@@ -36,7 +33,6 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
         tvSecondaryPhone = findViewById(R.id.tvTel_02);
         tvCompany = findViewById(R.id.tvNegocio);
         tvEmail = findViewById(R.id.tvCorreo);
-        btnupdate_user = findViewById(R.id.btnupdate_user);
 
         Bundle bundle = getIntent().getExtras(); // Getting extras from intent (RecyclerViewAdapter)
         // Show info in the view
@@ -47,23 +43,6 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
         tvSecondaryPhone.setText(bundle.getString("secondPhone"));
         tvCompany.setText(bundle.getString("company"));
         tvEmail.setText(bundle.getString("email"));
-    }
-
-    private void Referenciar() {
-        btnupdate_user = findViewById(R.id.btnupdate_user);
-        btnupdate_user.setOnClickListener((View.OnClickListener) this);
-
-    }
-    @Override
-    public void onClick (View v){
-        switch (v.getId()){
-
-        case R.id.btnupdate_user:
-        Toast.makeText( this, "ACTUALIZAR USUARIO", Toast.LENGTH_SHORT).show();
-        Intent pasar= new Intent(ClientDetailActivity.this,ClientEditActivity.class);
-        startActivity(pasar);
-        break;
-    }
     }
 
 }
