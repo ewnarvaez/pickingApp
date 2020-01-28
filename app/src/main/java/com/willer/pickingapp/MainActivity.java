@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Client;
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if ((etUser.getText().toString().trim()).equals("mmmm") ) {
                     if (etPass.getText().toString().trim().equals("1234")) {
-                        intent = new Intent(getApplicationContext(), ClientSearchActivity.class);
+                        intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
                         startActivity(intent);
                     } else {
                         tvErrors.setText("La contraseña no coincide con la registrada en la base de datos");

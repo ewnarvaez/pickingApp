@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".ClientSearchActivity" />
         <activity android:name=".ClientDetailActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BottomNavigationActivity">
