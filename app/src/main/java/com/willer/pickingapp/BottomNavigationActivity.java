@@ -19,7 +19,6 @@ public class BottomNavigationActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
     private OrderFragment orderFragment;
-    private SearchingFragment searchingFragment;
     private SearchFragment searchFragment;
     private UpdateFragment updateFragment;
 
@@ -29,7 +28,6 @@ public class BottomNavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_navigation);
 
         orderFragment = new OrderFragment();
-        searchingFragment = new SearchingFragment();
         searchFragment = new SearchFragment();
         updateFragment = new UpdateFragment();
 
