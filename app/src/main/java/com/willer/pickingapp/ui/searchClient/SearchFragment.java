@@ -41,8 +41,7 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search, container, false);
-        recyclerView = (RecyclerView) container.findViewById(R.id.rvListadoClientes);
-        recyclerView.setHasFixedSize(true);
+        recyclerView = (RecyclerView) view.findViewById(R.id.rvListadoClientes);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         clientArrayList = new ArrayList<>();
 

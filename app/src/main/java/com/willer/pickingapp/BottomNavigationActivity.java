@@ -1,24 +1,25 @@
 package com.willer.pickingapp;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.willer.pickingapp.ui.Order.OrderFragment;
 import com.willer.pickingapp.ui.searchClient.SearchFragment;
 import com.willer.pickingapp.ui.updateClient.UpdateFragment;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.FragmentTransaction;
 
 public class BottomNavigationActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
-    private Fragment fragment;
+    private FrameLayout frameLayout;
     private OrderFragment orderFragment;
+    private SearchingFragment searchingFragment;
     private SearchFragment searchFragment;
     private UpdateFragment updateFragment;
 
@@ -26,15 +27,47 @@ public class BottomNavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+
+        orderFragment = new OrderFragment();
+        searchingFragment = new SearchingFragment();
+        searchFragment = new SearchFragment();
+        updateFragment = new UpdateFragment();
+
+        bottomNavigationView = findViewById(R.id.nav_view);
+        frameLayout = findViewById(R.id.frameLayout);
+
+        setFragment(searchFragment);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+
+                    case R.id.navigation_search:
+                        setFragment(searchFragment);
+                        break;
+
+                    case R.id.navigation_order:
+                        setFragment(orderFragment);
+                        break;
+
+                    case R.id.navigation_update:
+                        setFragment(updateFragment);
+                        break;
+
+                }
+                return false;
+            }
+        });
+    }
+
+    private void setFragment(Fragment fragment) {
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
+        fragmentTransaction.commit();
     }
 
 }
