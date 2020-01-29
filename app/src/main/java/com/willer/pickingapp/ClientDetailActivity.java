@@ -60,6 +60,9 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
                 intent.putExtra("email", bundle.getString("email"));
                 startActivity(intent);
                 break;
+
+            case R.id.btnOrder:
+                break;
         }
     }
 
