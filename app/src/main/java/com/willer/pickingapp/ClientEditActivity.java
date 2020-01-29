@@ -24,7 +24,7 @@ public class ClientEditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client_detail);
+        setContentView(R.layout.activity_client_edit);
 
         tvName = findViewById(R.id.tvNombreCliente);
         tvDNI = findViewById(R.id.tvDocumento);

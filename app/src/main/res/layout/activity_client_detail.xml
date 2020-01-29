@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".ClientDetailActivity">
 
-
     <ImageView
         android:id="@+id/fondo_blanco"
         android:layout_width="0dp"
@@ -19,9 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDetalle">
-
     </ImageView>
-
 
     <TextView
         android:id="@+id/tvDetalle"
@@ -193,8 +190,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
-
-
     <TextView
         android:id="@+id/tvCorreo"
         android:layout_width="0dp"
@@ -220,6 +215,34 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline33" />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_bordeado_verde"
+        android:elevation="10dp"
+        android:text="@string/order"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
+
+    <Button
+        android:id="@+id/btnUpdateUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_bordeado_verde"
+        android:elevation="10dp"
+        android:text="@string/title_update"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
 
     <!-- CUADRICULA DE GUIAS VERTICALES -->
 
@@ -489,33 +512,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.94" />
-
-    <Button
-        android:id="@+id/btnOrder"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_verde"
-        android:elevation="10dp"
-        android:text="@string/order"
-        android:textColor="@color/White"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline36"
-        app:layout_constraintEnd_toStartOf="@+id/guideline17"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
-
-    <Button
-        android:id="@+id/btnupdate_user"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_verde"
-        android:elevation="10dp"
-        android:text="@string/title_update"
-        android:textColor="@color/White"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline36"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
