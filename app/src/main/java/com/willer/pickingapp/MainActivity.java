@@ -3,14 +3,11 @@ package com.willer.pickingapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Client;
 

@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.willer.pickingapp.R.id.btnupdate_user;
-
 public class ClientDetailActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tvName;
@@ -28,7 +26,7 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_detail);
         Referenciar();
-
+        getSupportActionBar().hide(); // HIDE ACTION BAR
         tvName = findViewById(R.id.tvNombreCliente);
         tvDNI = findViewById(R.id.tvDocumento);
         tvCity = findViewById(R.id.tvCiudad);
@@ -58,12 +56,12 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
     public void onClick (View v){
         switch (v.getId()){
 
-        case R.id.btnupdate_user:
-        Toast.makeText( this, "ACTUALIZAR USUARIO", Toast.LENGTH_SHORT).show();
-        Intent pasar= new Intent(ClientDetailActivity.this,ClientEditActivity.class);
-        startActivity(pasar);
-        break;
-    }
+            case R.id.btnupdate_user:
+            Toast.makeText( this, "ACTUALIZAR USUARIO", Toast.LENGTH_SHORT).show();
+            Intent pasar= new Intent(ClientDetailActivity.this,ClientEditActivity.class);
+            startActivity(pasar);
+            break;
+        }
     }
 
 }
