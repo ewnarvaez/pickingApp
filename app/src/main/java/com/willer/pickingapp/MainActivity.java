@@ -81,9 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Update a client
         Client c = db.getClient(4);
-//        c.setName("Duber Leivys Delgado Burbano");
-//        c.setCity("Popayán");
-//        int rowUpdated = db.updateClient(c);
+        c.setName("Duber Leivys Delgado Burbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaano");
+        c.setCity("Popayán");
+        c.setEmail("fadkfjasdjfadjfadfdfdskdjfkdfjsjdf@gmail.com");
+        int rowUpdated = db.updateClient(c);
 
         // Delete a client
         //db.deleteClient(c);
