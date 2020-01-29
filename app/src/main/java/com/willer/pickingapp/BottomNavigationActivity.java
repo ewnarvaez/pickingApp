@@ -19,7 +19,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
     private FrameLayout frameLayout;
     private OrderFragment orderFragment;
     private SearchFragment searchFragment;
-    private UpdateFragment updateFragment;
+//    private UpdateFragment updateFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
         orderFragment = new OrderFragment();
         searchFragment = new SearchFragment();
-        updateFragment = new UpdateFragment();
+//        updateFragment = new UpdateFragment();
 
         bottomNavigationView = findViewById(R.id.nav_view);
         frameLayout = findViewById(R.id.frameLayout);
@@ -52,10 +52,10 @@ public class BottomNavigationActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         break;
 
-                    case R.id.navigation_update:
-                        setFragment(updateFragment);
-                        menuItem.setChecked(true);
-                        break;
+//                    case R.id.navigation_update:
+//                        setFragment(updateFragment);
+//                        menuItem.setChecked(true);
+//                        break;
 
                 }
                 return false;

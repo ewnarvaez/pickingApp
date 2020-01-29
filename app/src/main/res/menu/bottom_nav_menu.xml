@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_pedido"
         android:title="@string/title_order" />
 
-    <item
-        android:id="@+id/navigation_update"
-        android:icon="@drawable/ic_actualizar"
-        android:title="@string/title_update" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_update"-->
+<!--        android:icon="@drawable/ic_actualizar"-->
+<!--        android:title="@string/title_update" />-->
 
 </menu>
