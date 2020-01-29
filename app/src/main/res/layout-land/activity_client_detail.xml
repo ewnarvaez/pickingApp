@@ -40,7 +40,6 @@
         android:drawableStart="@drawable/ic_persona"
         android:ems="10"
         android:gravity="center"
-        siz
         android:text="@string/client"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
