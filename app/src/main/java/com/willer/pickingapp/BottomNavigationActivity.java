@@ -1,28 +1,17 @@
 package com.willer.pickingapp;
 
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.willer.pickingapp.adapter.RecyclerViewAdapter;
-import com.willer.pickingapp.data.DatabaseHandler;
-import com.willer.pickingapp.model.Client;
 import com.willer.pickingapp.ui.Order.OrderFragment;
 import com.willer.pickingapp.ui.searchClient.SearchFragment;
 import com.willer.pickingapp.ui.updateClient.UpdateFragment;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class BottomNavigationActivity extends AppCompatActivity {
 
@@ -55,14 +44,17 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
                     case R.id.navigation_search:
                         setFragment(searchFragment);
+                        menuItem.setChecked(true);
                         break;
 
                     case R.id.navigation_order:
                         setFragment(orderFragment);
+                        menuItem.setChecked(true);
                         break;
 
                     case R.id.navigation_update:
                         setFragment(updateFragment);
+                        menuItem.setChecked(true);
                         break;
 
                 }
