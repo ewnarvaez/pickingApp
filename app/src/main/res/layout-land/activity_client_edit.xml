@@ -86,7 +86,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvCiudad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvTel_01"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvTel_02"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvNegocio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
 
-    <TextView
+    <EditText
         android:id="@+id/tvCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
