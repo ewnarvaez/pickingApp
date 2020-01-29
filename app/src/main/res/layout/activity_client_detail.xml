@@ -54,7 +54,7 @@
     <TextView
         android:id="@+id/tvNombreCliente"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
@@ -80,7 +80,7 @@
     <TextView
         android:id="@+id/tvDocumento"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
@@ -92,7 +92,7 @@
     <TextView
         android:id="@+id/tvCiudad"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
@@ -118,7 +118,7 @@
     <TextView
         android:id="@+id/tvTel_01"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
@@ -144,7 +144,7 @@
     <TextView
         android:id="@+id/tvTel_02"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
@@ -170,7 +170,7 @@
     <TextView
         android:id="@+id/tvNegocio"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
@@ -198,7 +198,7 @@
     <TextView
         android:id="@+id/tvCorreo"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
