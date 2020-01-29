@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/backgroundBlue</item>
         <item name="colorPrimaryDark">@color/backgroundBlue</item>
@@ -9,7 +9,7 @@
         <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
 
-    <style name="MyActionBar" parent="@style/Theme.AppCompat.Light">
+    <style name="MyActionBar" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:background">@color/backgroundBlue</item>
     </style>
 
