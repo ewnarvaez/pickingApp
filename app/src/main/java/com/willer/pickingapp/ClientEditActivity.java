@@ -25,6 +25,7 @@ public class ClientEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_edit);
+        getSupportActionBar().hide();
 
         tvName = findViewById(R.id.tvNombreCliente);
         tvDNI = findViewById(R.id.tvDocumento);
