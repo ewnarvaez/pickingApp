@@ -139,6 +139,19 @@
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
 
+    <Spinner
+        android:id="@+id/sp_State"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline29">
+
+    </Spinner>
+
+
+
     <TextView
         android:id="@+id/editText5"
         android:layout_width="0dp"
@@ -151,18 +164,6 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline29" />
-
-    <EditText
-        android:id="@+id/tvState"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:gravity="center"
-        android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
     <EditText
