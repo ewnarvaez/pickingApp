@@ -20,6 +20,7 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
     private TextView tvSecondaryPhone;
     private TextView tvCompany;
     private TextView tvEmail;
+    private TextView tvStatus;
     private Button btnUpdateUser;
     private Bundle bundle;
 
@@ -51,6 +52,7 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
 
             case R.id.btnUpdateUser:
                 Intent intent= new Intent(ClientDetailActivity.this, ClientEditActivity.class);
+                intent.putExtra("id", bundle.getString("id"));
                 intent.putExtra("name", bundle.getString("name"));
                 intent.putExtra("dni", bundle.getString("dni"));
                 intent.putExtra("city", bundle.getString("city"));

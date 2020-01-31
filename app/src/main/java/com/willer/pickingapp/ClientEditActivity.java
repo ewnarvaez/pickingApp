@@ -10,7 +10,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ClientEditActivity extends AppCompatActivity {
+import com.willer.pickingapp.data.DatabaseHandler;
+import com.willer.pickingapp.model.Client;
+
+public class ClientEditActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView tvName;
     private TextView tvDNI;
@@ -19,6 +22,9 @@ public class ClientEditActivity extends AppCompatActivity {
     private TextView tvSecondaryPhone;
     private TextView tvCompany;
     private TextView tvEmail;
+    private Button btnCancel;
+    private Button btnUpdate;
+    private Bundle bundle;
 
 
     @Override
@@ -34,7 +40,7 @@ public class ClientEditActivity extends AppCompatActivity {
         tvCompany = findViewById(R.id.tvNegocio);
         tvEmail = findViewById(R.id.tvCorreo);
 
-        Bundle bundle = getIntent().getExtras(); // Getting extras from intent (RecyclerViewAdapter)
+        bundle = getIntent().getExtras(); // Getting extras from intent (RecyclerViewAdapter)
         // Show info in the view
         tvName.setText(bundle.getString("name"));
         tvDNI.setText(bundle.getString("dni"));
@@ -43,6 +49,33 @@ public class ClientEditActivity extends AppCompatActivity {
         tvSecondaryPhone.setText(bundle.getString("secondPhone"));
         tvCompany.setText(bundle.getString("company"));
         tvEmail.setText(bundle.getString("email"));
+        btnCancel = findViewById(R.id.btnCancel);
+        btnUpdate = findViewById(R.id.btnUpdate);
+
+        btnUpdate.setEnabled(true);
+
+        btnCancel.setOnClickListener(this);
+        btnUpdate.setOnClickListener(this);
     }
 
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnCancel:
+                super.onBackPressed();
+                break;
+
+            case R.id.btnUpdate:
+                Client client = new Client();
+                DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+                client = db.getClient(bundle.getInt("id"));
+                client.setCity((String) tvCity.getText());
+                client.setMainPhoneNumber((String) tvMainPhone.getText());
+                client.setSecondPhoneNumber((String) tvSecondaryPhone.getText());
+                client.setCompany((String) tvCompany.getText());
+
+                break;
+        }
+    }
 }

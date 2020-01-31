@@ -8,21 +8,25 @@ public class Client {
   private String city;
   private String mainPhoneNumber;
   private String secondPhoneNumber;
-  private String Company;
+  private String company;
   private String email;
+  private String status;
 
   public Client() {
   }
 
-  public Client(int id, String name, String dni, String city, String mainPhoneNumber, String secondPhoneNumber, String company, String email) {
+  public Client(int id, String name, String dni, String city, String mainPhoneNumber,
+                String secondPhoneNumber, String company, String email, String status) {
+
     this.id = id;
     this.name = name;
     this.dni = dni;
     this.city = city;
     this.mainPhoneNumber = mainPhoneNumber;
     this.secondPhoneNumber = secondPhoneNumber;
-    Company = company;
+    this.company = company;
     this.email = email;
+    this.status = status;
   }
 
   public int getId() {
@@ -62,6 +66,7 @@ public class Client {
   }
 
   public void setMainPhoneNumber(String mainPhoneNumber) {
+
     this.mainPhoneNumber = mainPhoneNumber;
   }
 
@@ -74,11 +79,11 @@ public class Client {
   }
 
   public String getCompany() {
-    return Company;
+    return company;
   }
 
   public void setCompany(String company) {
-    Company = company;
+    this.company = company;
   }
 
   public String getEmail() {
@@ -87,6 +92,14 @@ public class Client {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getStatus(){
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 
 }

@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light" >
         <activity android:name=".ClientDetailActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".BottomNavigationActivity" />
         <activity android:name=".ClientEditActivity" />
-        <activity android:name=".BottomNavigationActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

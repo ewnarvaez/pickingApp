@@ -8,7 +8,6 @@
     android:background="@drawable/fondo_azul"
     tools:context=".ClientEditActivity">
 
-
     <ImageView
         android:id="@+id/fondo_blanco"
         android:layout_width="0dp"
@@ -19,9 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEdit">
-
     </ImageView>
-
 
     <TextView
         android:id="@+id/tvEdit"
@@ -205,8 +202,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
-
-
     <EditText
         android:id="@+id/tvCorreo"
         android:layout_width="0dp"
@@ -235,15 +230,12 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline33" />
 
-
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_verde"
         android:elevation="10dp"
         android:text="@string/title_update"
-        android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline37"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
@@ -533,13 +525,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.97" />
-
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

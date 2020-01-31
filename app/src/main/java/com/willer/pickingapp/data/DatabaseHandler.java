@@ -28,7 +28,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + Util.KEY_ID + " INTEGER PRIMARY KEY, " + Util.KEY_NAME +
                 " TEXT, " + Util.KEY_DNI + " TEXT, " + Util.KEY_CITY + " TEXT, "
                 + Util.KEY_MAIN_PN + " TEXT, " + Util.KEY_SECOND_PN + " TEXT, "
-                + Util.KEY_COMPANY + " TEXT, " + Util.KEY_EMAIL + " TEXT" + ")";
+                + Util.KEY_COMPANY + " TEXT, " + Util.KEY_EMAIL + " TEXT, "
+                + Util.KEY_STATUS + " TEXT" + ")";
 
         db.execSQL(CREATE_CLIENT_TABLE);
     }
@@ -58,6 +59,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Util.KEY_SECOND_PN, client.getSecondPhoneNumber());
         values.put(Util.KEY_COMPANY, client.getCompany());
         values.put(Util.KEY_EMAIL, client.getEmail());
+        values.put(Util.KEY_STATUS, client.getStatus());
 
         // Insert a row
         db.insert(Util.TABLE_NAME, null, values);
@@ -70,7 +72,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase(); // Allow us use database in readable mode
         // Creating cursor to move into database rows
         Cursor cursor = db.query(Util.TABLE_NAME, new String[]{Util.KEY_ID, Util.KEY_NAME, Util.KEY_DNI,
-        Util.KEY_CITY, Util.KEY_MAIN_PN, Util.KEY_SECOND_PN, Util.KEY_COMPANY, Util.KEY_EMAIL},
+        Util.KEY_CITY, Util.KEY_MAIN_PN, Util.KEY_SECOND_PN, Util.KEY_COMPANY, Util.KEY_EMAIL, Util.KEY_STATUS},
                 Util.KEY_ID + "=?", new String[]{String.valueOf(id)}, null, null,
                 null, null);
 
@@ -85,6 +87,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         client.setSecondPhoneNumber(cursor.getString(5));
         client.setCompany(cursor.getString(6));
         client.setEmail(cursor.getString(7));
+        client.setStatus(cursor.getString(8));
 
         return client;
     }
@@ -110,6 +113,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 client.setSecondPhoneNumber(cursor.getString(5));
                 client.setCompany(cursor.getString(6));
                 client.setEmail(cursor.getString(7));
+                client.setStatus(cursor.getString(8));
 
                 // Add client object to the list
                 clientList.add(client);
@@ -132,6 +136,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Util.KEY_SECOND_PN, client.getSecondPhoneNumber());
         values.put(Util.KEY_COMPANY, client.getCompany());
         values.put(Util.KEY_EMAIL, client.getEmail());
+        values.put(Util.KEY_STATUS, client.getStatus());
 
         return db.update(Util.TABLE_NAME, values, Util.KEY_ID + "=?", new String[]{String.valueOf(client.getId())});
     }
