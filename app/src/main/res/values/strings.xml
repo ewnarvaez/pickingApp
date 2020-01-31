@@ -8,7 +8,7 @@
     <string name="client">Cliente</string>
     <string name="document">Documento</string>
     <string name="city">Ciudad</string>
-    <string name="main_phone">Telefono Principal</string>
+    <string name="phone">Telefono </string>
     <string name="secondary_phone">Telefono Secundario</string>
     <string name="business">Negocio</string>
     <string name="mail">Correo</string>
