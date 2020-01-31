@@ -34,16 +34,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if ((etUser.getText().toString().trim()).equals("mmmm") ) {
-                    if (etPass.getText().toString().trim().equals("1234")) {
-                        intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
-                        startActivity(intent);
-                    } else {
-                        tvErrors.setText("La contraseña no coincide con la registrada en la base de datos");
-                    }
+            if ((etUser.getText().toString().trim()).equals("mmmm") ) {
+                if (etPass.getText().toString().trim().equals("1234")) {
+                    intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
+                    startActivity(intent);
                 } else {
-                    tvErrors.setText("El usuario no existe en la base de datos");
+                    tvErrors.setText("La contraseña no coincide con la registrada en la base de datos");
                 }
+            } else {
+                tvErrors.setText("El usuario no existe en la base de datos");
+            }
             }
         });
 
@@ -53,41 +53,47 @@ public class MainActivity extends AppCompatActivity {
         duber.setCity("Popayán"); duber.setMainPhoneNumber("8241414");
         duber.setSecondPhoneNumber("3133307332"); duber.setCompany("Papelería N y M");
         duber.setEmail("dubernm@gmail.com");
+        duber.setStatus("Activo");
 
         Client erwin = new Client();
         erwin.setName("Erwin Meza Vega"); erwin.setDni("102145784");
         erwin.setCity("Bucaramanga"); erwin.setMainPhoneNumber("8372484");
         erwin.setSecondPhoneNumber("3154070506"); erwin.setCompany("Ingenia S.A.S");
         erwin.setEmail("emezav@gmail.com");
+        erwin.setStatus("Activo");
 
         Client felipe = new Client();
         felipe.setName("José Felipe Betancourt"); felipe.setDni("1023256215");
         felipe.setCity("Popayán"); felipe.setMainPhoneNumber("3113617453");
         felipe.setSecondPhoneNumber("3113617453"); felipe.setCompany("Soluciones Innovadoras");
         felipe.setEmail("felipe157@gmail.com");
+        felipe.setStatus("Activo");
 
         Client edwin = new Client();
         edwin.setName("Edwin Willer Narváez Burbano"); edwin.setDni("763256987");
         edwin.setCity("Popayán"); edwin.setMainPhoneNumber("3105160807");
         edwin.setSecondPhoneNumber("3105160807"); edwin.setCompany("Ingenia Soluciones S.A.S");
         edwin.setEmail("ewnarvaez@gmail.com");
+        edwin.setStatus("Activo");
 
         // Clients creation in database
-        DatabaseHandler db = new DatabaseHandler(MainActivity.this);
+//        DatabaseHandler db = new DatabaseHandler(MainActivity.this);
 //        db.addClient(duber);
 //        db.addClient(erwin);
 //        db.addClient(felipe);
 //        db.addClient(edwin);
 
         // Update a client
-        Client c = db.getClient(4);
-        c.setName("Duber Leivys Delgado Burbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaano");
-        c.setCity("Popayán");
-        c.setEmail("fadkfjasdjfadjfadfdfdskdjfkdfjsjdf@gmail.com");
-        int rowUpdated = db.updateClient(c);
+//        Client c = db.getClient(4);
+//        c.setName("Duber Leivys Delgado Burbano");
+//        c.setCity("Popayán");
+//        c.setEmail("leivyspresleyburbanodel@gmail.com");
+//        int rowUpdated = db.updateClient(c);
 
         // Delete a client
-        //db.deleteClient(c);
-
+//        for (int i= 1; i < 17; i++) {
+//            Client c = db.getClient(i);
+//            db.deleteClient(c);
+//        }
     }
 }

@@ -74,9 +74,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public void onClick(View v) {
 
             int position = getAdapterPosition(); // Function that get the item position in the List
-            Client client = clientArrayList.get(position); // Get every one client object
+            Client client = clientArrayList.get(position); // Get client object
             // Intent creation
             Intent intent = new Intent(context, ClientDetailActivity.class);
+            intent.putExtra("id", client.getId());
             intent.putExtra("name", client.getName());
             intent.putExtra("dni", client.getDni());
             intent.putExtra("city", client.getCity());
@@ -84,6 +85,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             intent.putExtra("secondPhone", client.getSecondPhoneNumber());
             intent.putExtra("company", client.getCompany());
             intent.putExtra("email", client.getEmail());
+            intent.putExtra("status", client.getStatus());
 
             // Sending the intent
             context.startActivity(intent);

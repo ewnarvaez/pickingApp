@@ -8,7 +8,6 @@
     android:background="@drawable/fondo_azul"
     tools:context=".ClientEditActivity">
 
-
     <ImageView
         android:id="@+id/fondo_blanco"
         android:layout_width="0dp"
@@ -500,6 +499,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.82" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline35_0"
         android:layout_width="wrap_content"
