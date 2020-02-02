@@ -3,7 +3,10 @@ package com.willer.pickingapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +28,8 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
     private Spinner spStatus;
     private EditText etCompany;
     private EditText etEmail;
+
+    private TextWatcher textWatcher;
 
     private Button btnCancel;
     private Button btnUpdate;
@@ -64,13 +69,51 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
         } else {
             spStatus.setSelection(1);
         }
-        
+
         etCompany.setText(bundle.getString("company"));
         etEmail.setText(bundle.getString("email"));
+
+        textWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                btnUpdate.setEnabled(true);
+            }
+        };
+
+        etMainPhone.addTextChangedListener(textWatcher);
+        etCity.addTextChangedListener(textWatcher);
+        etCity.addTextChangedListener(textWatcher);
+        etEmail.addTextChangedListener(textWatcher);
+        spStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (spStatus.getSelectedItem().toString().equals(bundle.getString("status"))) {
+                    btnUpdate.setEnabled(false);
+                } else {
+                    btnUpdate.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         btnCancel = findViewById(R.id.btnCancel);
         btnUpdate = findViewById(R.id.btnUpdate);
 
-        btnUpdate.setEnabled(true);
+        btnUpdate.setEnabled(false);
 
         btnCancel.setOnClickListener(this);
         btnUpdate.setOnClickListener(this);
