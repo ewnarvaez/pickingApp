@@ -85,18 +85,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
     <TextView
-        android:id="@+id/tvCiudad"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:gravity="center"
-        android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline26"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline25" />
-
-    <TextView
         android:id="@+id/editText3"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -111,16 +99,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
     <TextView
-        android:id="@+id/tvTel_01"
+        android:id="@+id/tvCiudad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline27" />
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
     <TextView
         android:id="@+id/editText4"
@@ -137,16 +125,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
-        android:id="@+id/tvTel_02"
+        android:id="@+id/tvTel_01"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
         android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline29" />
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
         android:id="@+id/editText5"
@@ -163,16 +151,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
     <TextView
-        android:id="@+id/tvNegocio"
+        android:id="@+id/tvStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text=""
-        android:textColor="@color/Black"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline32"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline31" />
+        app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
     <TextView
         android:id="@+id/editText6"
@@ -189,18 +177,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
     <TextView
-        android:id="@+id/tvCorreo"
+        android:id="@+id/tvNegocio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="@color/Black"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline34"
+        app:layout_constraintBottom_toTopOf="@+id/guideline32"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline33"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
     <TextView
         android:id="@+id/editText7"
@@ -218,20 +204,21 @@
         app:layout_constraintTop_toTopOf="@+id/guideline33"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnOrder"
+    <TextView
+        android:id="@+id/tvCorreo"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_verde"
-        android:elevation="10dp"
-        android:text="@string/order"
-        android:textColor="@color/White"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline35"
-        app:layout_constraintEnd_toStartOf="@+id/guideline16"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/Black"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline34"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline33"
+        app:layout_constraintVertical_bias="0.0" />
 
+<!--    Botón Actualizar-->
     <Button
         android:id="@+id/btnUpdateUser"
         android:layout_width="0dp"
@@ -244,6 +231,21 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline35"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
+
+<!--    Botón Pedido-->
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_bordeado_verde"
+        android:elevation="10dp"
+        android:text="@string/order"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline35"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
 
     <!-- CUADRICULA DE GUIAS VERTICALES -->

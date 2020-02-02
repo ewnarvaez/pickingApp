@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,14 +20,17 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
 
     private TextView tvName;
     private TextView tvDNI;
-    private TextView tvCity;
-    private TextView tvMainPhone;
-    private TextView tvSecondaryPhone;
-    private TextView tvCompany;
-    private TextView tvEmail;
+    private EditText etCity;
+    private EditText etMainPhone;
+    private Spinner spStatus;
+    private EditText etCompany;
+    private EditText etEmail;
+
     private Button btnCancel;
     private Button btnUpdate;
     private Bundle bundle;
+
+    private static final String[] Status = {"Activo", "Inactivo"};
 
 
     @Override
@@ -35,25 +41,28 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
 
         tvName = findViewById(R.id.tvNombreCliente);
         tvDNI = findViewById(R.id.tvDocumento);
-        tvCity = findViewById(R.id.tvCiudad);
-        tvMainPhone = findViewById(R.id.tvTel_01);
-        tvSecondaryPhone = findViewById(R.id.tvTel_02);
-        tvCompany = findViewById(R.id.tvNegocio);
-        tvEmail = findViewById(R.id.tvCorreo);
+        etCity = findViewById(R.id.etCiudad);
+        etMainPhone = findViewById(R.id.etTel01);
+        spStatus = findViewById(R.id.spStatus);
+        etCompany = findViewById(R.id.etNegocio);
+        etEmail = findViewById(R.id.etCorreo);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(ClientEditActivity.this, android.R.layout.simple_spinner_dropdown_item, Status);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spStatus.setAdapter(adapter);
 
         bundle = getIntent().getExtras(); // Getting extras from intent (RecyclerViewAdapter)
         // Show info in the view
         tvName.setText(bundle.getString("name"));
         tvDNI.setText(bundle.getString("dni"));
-        tvCity.setText(bundle.getString("city"));
-        tvMainPhone.setText(bundle.getString("mainPhone"));
-        tvSecondaryPhone.setText(bundle.getString("secondPhone"));
-        tvCompany.setText(bundle.getString("company"));
-        tvEmail.setText(bundle.getString("email"));
+        etCity.setText(bundle.getString("city"));
+        etMainPhone.setText(bundle.getString("mainPhone"));
+        etCompany.setText(bundle.getString("company"));
+        etEmail.setText(bundle.getString("email"));
         btnCancel = findViewById(R.id.btnCancel);
         btnUpdate = findViewById(R.id.btnUpdate);
 
-        btnUpdate.setEnabled(true);
+        btnUpdate.setEnabled(false);
 
         btnCancel.setOnClickListener(this);
         btnUpdate.setOnClickListener(this);
@@ -71,10 +80,9 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
                 Client client = new Client();
                 DatabaseHandler db = new DatabaseHandler(getApplicationContext());
                 client = db.getClient(bundle.getInt("id"));
-                client.setCity((String) tvCity.getText());
-                client.setMainPhoneNumber((String) tvMainPhone.getText());
-                client.setSecondPhoneNumber((String) tvSecondaryPhone.getText());
-                client.setCompany((String) tvCompany.getText());
+                client.setCity(etCity.getText().toString());
+                client.setMainPhoneNumber(etMainPhone.getText().toString());
+                client.setCompany(etCompany.getText().toString());
 
                 break;
         }
