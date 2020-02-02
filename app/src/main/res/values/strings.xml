@@ -26,7 +26,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_search">Buscar</string>
     <string name="title_order">Pedido</string>
-    <string name="title_update">Actualizar</string>
+    <string name="title_update">Guardar</string>
     <string name="edit_user">Editar Usuario</string>
     <string name="edit">Editar</string>
     <string name="cancel">Cancelar</string>

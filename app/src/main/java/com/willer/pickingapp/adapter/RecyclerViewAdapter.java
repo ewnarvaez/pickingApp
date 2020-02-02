@@ -82,10 +82,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             intent.putExtra("dni", client.getDni());
             intent.putExtra("city", client.getCity());
             intent.putExtra("mainPhone", client.getMainPhoneNumber());
-            intent.putExtra("secondPhone", client.getSecondPhoneNumber());
+            intent.putExtra("status", client.getStatus());
             intent.putExtra("company", client.getCompany());
             intent.putExtra("email", client.getEmail());
-            intent.putExtra("status", client.getStatus());
 
             // Sending the intent
             context.startActivity(intent);

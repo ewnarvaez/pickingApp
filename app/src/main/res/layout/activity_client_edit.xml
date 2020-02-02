@@ -244,8 +244,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline36" />
 
-
-
     <!-- CUADRICULA DE GUIAS VERTICALES -->
 
     <androidx.constraintlayout.widget.Guideline

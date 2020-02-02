@@ -57,12 +57,20 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
         tvDNI.setText(bundle.getString("dni"));
         etCity.setText(bundle.getString("city"));
         etMainPhone.setText(bundle.getString("mainPhone"));
+
+//        Código para mostrar el valor que tiene actualmente el campo estado
+        if ((bundle.getString("status").equals("Activo"))) {
+            spStatus.setSelection(0);
+        } else {
+            spStatus.setSelection(1);
+        }
+        
         etCompany.setText(bundle.getString("company"));
         etEmail.setText(bundle.getString("email"));
         btnCancel = findViewById(R.id.btnCancel);
         btnUpdate = findViewById(R.id.btnUpdate);
 
-        btnUpdate.setEnabled(false);
+        btnUpdate.setEnabled(true);
 
         btnCancel.setOnClickListener(this);
         btnUpdate.setOnClickListener(this);
@@ -82,8 +90,25 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
                 client = db.getClient(bundle.getInt("id"));
                 client.setCity(etCity.getText().toString());
                 client.setMainPhoneNumber(etMainPhone.getText().toString());
+                client.setStatus(spStatus.getSelectedItem().toString());
                 client.setCompany(etCompany.getText().toString());
+                client.setEmail(etEmail.getText().toString());
 
+                // Client update action
+                db.updateClient(client);
+
+                Intent intent = new Intent(getApplicationContext(), ClientDetailActivity.class);
+                intent.putExtra("id", client.getId());
+                intent.putExtra("name", client.getName());
+                intent.putExtra("dni", client.getDni());
+                intent.putExtra("city", client.getCity());
+                intent.putExtra("mainPhone", client.getMainPhoneNumber());
+                intent.putExtra("status", client.getStatus());
+                intent.putExtra("company", client.getCompany());
+                intent.putExtra("email", client.getEmail());
+
+                // Sending the intent
+                startActivity(intent);
                 break;
         }
     }

@@ -52,7 +52,7 @@ public class ClientDetailActivity extends AppCompatActivity implements View.OnCl
 
             case R.id.btnUpdateUser:
                 Intent intent= new Intent(ClientDetailActivity.this, ClientEditActivity.class);
-                intent.putExtra("id", bundle.getString("id"));
+                intent.putExtra("id", bundle.getInt("id"));
                 intent.putExtra("name", bundle.getString("name"));
                 intent.putExtra("dni", bundle.getString("dni"));
                 intent.putExtra("city", bundle.getString("city"));
