@@ -222,7 +222,6 @@
         android:id="@+id/btnUpdateUser"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_verde"
         android:elevation="10dp"
         android:text="@string/edit"
         android:textColor="@color/White"
@@ -230,7 +229,9 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toTopOf="@+id/guideline35_0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline35_0"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
 
 <!--    Botón Pedido-->
     <Button
