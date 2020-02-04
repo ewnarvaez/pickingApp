@@ -14,8 +14,8 @@ import com.willer.pickingapp.model.Client;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextInputEditText etUser;
-    private TextInputEditText etPass;
+    private EditText etUser;
+    private EditText etPass;
     private Button btnLogin;
     private TextView tvErrors;
     Intent intent;
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etUser = (TextInputEditText) findViewById(R.id.etUserName);
-        etPass = (TextInputEditText) findViewById(R.id.etPass);
+        etUser = (EditText) findViewById(R.id.etUserName);
+        etPass = (EditText) findViewById(R.id.etPass);
         tvErrors = (TextView) findViewById(R.id.tvErrors);
         btnLogin = (Button) findViewById(R.id.btnLogin);
 
