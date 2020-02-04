@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_azul"
+    android:background="@drawable/fondo_blanco"
     android:foregroundGravity="center"
     tools:context=".MainActivity">
 
@@ -28,61 +28,94 @@
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_verde"
         android:elevation="10dp"
         android:text="@string/login_message"
-        android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline15"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
-        app:layout_constraintVertical_bias="1.0" />
+        style="@style/Widget.AppCompat.Button.Colored"/>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPass"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado"
-        android:drawableStart="@drawable/ic_contrasena"
-        android:drawablePadding="-25dip"
-        android:elevation="10dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/pass"
         android:importantForAutofill="no"
-        android:inputType="textPassword"
+        android:outlineSpotShadowColor="@color/Blue"
         android:padding="05dip"
-        android:textColorHint="@color/Gray"
+        android:textColor="@color/Blue"
+        android:textColorHint="@color/Black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline23"
-        tools:targetApi="o" />
+        tools:targetApi="o">
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/pass"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+
+            android:padding="05dip"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline27"
+            app:layout_constraintEnd_toStartOf="@+id/guideline16"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline26"
+            tools:targetApi="o" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etUserName"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado"
-        android:drawableStart="@drawable/ic_persona"
-        android:drawablePadding="-25dip"
-        android:elevation="10dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/user"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:padding="5dip"
-        android:textColorHint="@color/Gray"
+        android:textColor="@color/Blue"
+        android:textColorHint="@color/Black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline20"
-        tools:targetApi="o" />
+        tools:targetApi="o">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/user"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:padding="5dip"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline25"
+            app:layout_constraintEnd_toStartOf="@+id/guideline16"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline24"
+            tools:targetApi="o" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvErrors"
