@@ -8,8 +8,6 @@
     android:foregroundGravity="center"
     tools:context=".MainActivity">
 
-    <!-- CUADRICULA DE GUIAS VERTICALES -->
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -17,7 +15,6 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/logo_description"
         android:scaleType="center"
-
         android:src="@mipmap/logo_mayorista_del_cauca"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
@@ -36,6 +33,45 @@
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline28"
         style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etUserName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/user"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="5dip"
+        android:textColor="@color/Blue"
+        android:textColorHint="@color/Black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline25"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline24"
+        tools:targetApi="o">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/user"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:padding="5dip"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline25"
+            app:layout_constraintEnd_toStartOf="@+id/guideline16"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline24"
+            tools:targetApi="o" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPass"
@@ -77,49 +113,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etUserName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/user"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:padding="5dip"
-        android:textColor="@color/Blue"
-        android:textColorHint="@color/Black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline25"
-        app:layout_constraintEnd_toStartOf="@+id/guideline16"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline24"
-        tools:targetApi="o">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="@string/user"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:padding="5dip"
-            android:textColor="@color/Blue"
-            android:textColorHint="@color/Black"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/guideline25"
-            app:layout_constraintEnd_toStartOf="@+id/guideline16"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="@+id/guideline24"
-            tools:targetApi="o" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
     <TextView
         android:id="@+id/tvErrors"
         android:layout_width="0dp"
@@ -129,6 +122,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
+
+    <!-- CUADRICULA DE GUIAS VERTICALES -->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

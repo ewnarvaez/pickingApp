@@ -8,12 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Client;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etUser, etPass;
+    private TextInputEditText etUser;
+    private TextInputEditText etPass;
     private Button btnLogin;
     private TextView tvErrors;
     Intent intent;
@@ -25,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etUser = (EditText) findViewById(R.id.etUserName);
-        etPass = (EditText) findViewById(R.id.etPass);
+        etUser = (TextInputEditText) findViewById(R.id.etUserName);
+        etPass = (TextInputEditText) findViewById(R.id.etPass);
         tvErrors = (TextView) findViewById(R.id.tvErrors);
         btnLogin = (Button) findViewById(R.id.btnLogin);
 
