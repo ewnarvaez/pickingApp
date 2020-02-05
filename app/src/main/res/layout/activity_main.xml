@@ -28,15 +28,14 @@
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/Blue"
-        android:elevation="10dp"
         android:text="@string/login_message"
-        android:textColor="@color/White"
         android:textStyle="bold"
+        android:textColor="@color/Blue"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline28" />
+        app:layout_constraintTop_toTopOf="@+id/guideline28"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
     <EditText
         android:id="@+id/etPass"
@@ -50,7 +49,7 @@
         android:padding="05dip"
         android:backgroundTint="@color/Black"
         android:textColor="@color/Black"
-        android:textColorHint="@color/Gray"
+        android:textColorHint="@color/Black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
@@ -70,7 +69,7 @@
         android:backgroundTint="@color/Black"
         android:padding="5dip"
         android:textColor="@color/Black"
-        android:textColorHint="@color/Gray"
+        android:textColorHint="@color/Black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
