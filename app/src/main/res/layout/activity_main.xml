@@ -35,7 +35,6 @@
         style="@style/Widget.AppCompat.Button.Colored"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etUserName"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -54,6 +53,7 @@
         tools:targetApi="o">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUserName"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:ems="10"
@@ -74,7 +74,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPass"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -93,6 +92,7 @@
         tools:targetApi="o">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPass"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:ems="10"
