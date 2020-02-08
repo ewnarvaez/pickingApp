@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:theme="@style/MyTheme.DayNight"
+        android:theme="@style/Theme.AppCompat.Light"
         tools:ignore="GoogleAppIndexingWarning"
         >
         <activity android:name=".ClientDetailActivity" />

@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide(); // HIDE ACTION BAR
+
         etUser = (EditText) findViewById(R.id.etUserName);
         etPass = (EditText) findViewById(R.id.etPass);
         tvErrors = (TextView) findViewById(R.id.tvErrors);
