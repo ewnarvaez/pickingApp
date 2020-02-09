@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_azul"
+    android:background="@drawable/fondo_blanco"
     android:orientation="vertical"
     tools:context=".ClientDetailActivity">
 
@@ -13,7 +13,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/logo_description"
-        android:src="@drawable/fondo_blanco"
         app:layout_constraintBottom_toTopOf="@+id/guideline35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,13 +25,26 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="@string/customer_details"
-        android:textColor="@color/White"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
+    <TextView
+        android:id="@+id/editText5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:background="@drawable/btn_bordeado_verde"
+        android:gravity="center"
+        android:text="@string/state"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <TextView
         android:id="@+id/editText"
@@ -43,22 +55,22 @@
         android:gravity="center"
         android:text="@string/client"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline21" />
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
     <TextView
         android:id="@+id/tvNombreCliente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline21" />
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
     <TextView
         android:id="@+id/editText2"
@@ -69,22 +81,22 @@
         android:gravity="center"
         android:text="@string/document"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline23" />
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
     <TextView
         android:id="@+id/tvDocumento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline23" />
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
     <TextView
         android:id="@+id/editText3"
@@ -95,22 +107,22 @@
         android:gravity="center"
         android:text="@string/city"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
         android:id="@+id/tvCiudad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
         android:id="@+id/editText4"
@@ -121,48 +133,26 @@
         android:gravity="center"
         android:text="@string/phone"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline27" />
+        app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
     <TextView
         android:id="@+id/tvTel_01"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text=""
-        android:gravity="center"
-        android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline27" />
-
-    <TextView
-        android:id="@+id/editText5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:drawableStart="@drawable/ic_estado"
-        android:ems="10"
-        android:gravity="center"
-        android:text="@string/state"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline29" />
-
-    <TextView
-        android:id="@+id/tvStatus"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:gravity="center"
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline29" />
+
+
+
+
 
     <TextView
         android:id="@+id/editText6"
@@ -224,7 +214,7 @@
         android:layout_height="0dp"
         android:elevation="10dp"
         android:text="@string/edit"
-
+        android:background="@drawable/btn_bordeado_verde"
         android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
@@ -238,9 +228,9 @@
         android:id="@+id/btnOrder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/Blue"
         android:elevation="10dp"
         android:text="@string/order"
+        android:background="@drawable/btn_bordeado_verde"
         android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
@@ -397,14 +387,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
+        app:layout_constraintGuide_percent="0.16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline22"
