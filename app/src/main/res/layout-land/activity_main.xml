@@ -24,12 +24,11 @@
 
     <Button
         android:id="@+id/btnLogin"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/Blue"
-        android:elevation="10dp"
         android:text="@string/login_message"
-        android:textColor="@color/White"
+        android:textColor="@color/Blue"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
