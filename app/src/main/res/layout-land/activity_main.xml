@@ -15,7 +15,6 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/logo_description"
         android:scaleType="center"
-
         android:src="@mipmap/logo_mayorista_del_cauca"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -24,12 +23,12 @@
 
     <Button
         android:id="@+id/btnLogin"
-        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/login_message"
-        android:textColor="@color/Blue"
+        android:textColor="@color/White"
         android:textStyle="bold"
+        android:background="@drawable/btn_bordeado_verde"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
         app:layout_constraintHorizontal_bias="0.0"
