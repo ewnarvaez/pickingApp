@@ -8,17 +8,6 @@
     android:orientation="vertical"
     tools:context=".ClientDetailActivity">
 
-    <ImageView
-        android:id="@+id/fondo_blanco"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/logo_description"
-        android:src="@drawable/fondo_gris"
-        app:layout_constraintBottom_toTopOf="@+id/guideline35"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline22" />
-
     <TextView
         android:id="@+id/tvDetalle"
         android:layout_width="0dp"
@@ -31,20 +20,33 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
     <TextView
         android:id="@+id/editText5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:ems="10"
         android:background="@drawable/btn_bordeado_verde"
+        android:ems="10"
         android:gravity="center"
         android:text="@string/state"
         android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
     <TextView
         android:id="@+id/editText"
@@ -211,7 +213,7 @@
         android:layout_height="0dp"
         android:elevation="10dp"
         android:text="@string/edit"
-        android:background="@drawable/btn_bordeado_verde"
+        android:background="@drawable/btn_bordeado_azul"
         android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
@@ -227,7 +229,7 @@
         android:layout_height="0dp"
         android:elevation="10dp"
         android:text="@string/order"
-        android:background="@drawable/btn_bordeado_verde"
+        android:background="@drawable/btn_bordeado_azul"
         android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline36"
