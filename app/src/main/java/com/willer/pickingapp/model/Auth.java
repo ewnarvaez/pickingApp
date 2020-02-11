@@ -4,7 +4,7 @@ public class Auth {
 
     private int status;
     private String message;
-    private String id;
+    private int id;
     private String token;
 
     public int getStatus() {
@@ -23,11 +23,11 @@ public class Auth {
         this.message = message;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
