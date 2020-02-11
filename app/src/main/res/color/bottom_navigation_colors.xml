@@ -3,8 +3,9 @@
 
     <item android:state_checked="true"
         android:state_selected="true"
-        android:color="@android:color/holo_blue_dark" />
+        android:color="@android:color/black" />
     <item android:state_checked="false"
         android:color="@android:color/darker_gray"/>
 
 </selector>
+

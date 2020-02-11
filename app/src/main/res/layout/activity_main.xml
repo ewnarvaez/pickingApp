@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_blanco"
+    android:background="@drawable/fondo_gris"
     android:foregroundGravity="center"
     tools:context=".MainActivity">
 
@@ -15,7 +15,6 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/logo_description"
         android:scaleType="center"
-
         android:src="@mipmap/logo_mayorista_del_cauca"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
@@ -67,13 +66,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/login_message"
+        android:textColor="@color/White"
         android:textStyle="bold"
-        android:textColor="@color/Blue"
+        style="@style/Widget.AppCompat.Button.Colored"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
-        app:layout_constraintEnd_toStartOf="@+id/guideline12"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline28"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline28" />
 
     <TextView
         android:id="@+id/tvErrors"
