@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_blanco"
+    android:background="@drawable/fondo_gris"
     android:foregroundGravity="center"
     tools:context=".MainActivity">
 
@@ -66,9 +66,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/login_message"
-        android:textColor="@color/White"
+        android:textColor="@color/Blue"
         android:textStyle="bold"
-        android:background="@drawable/btn_bordeado_verde"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
