@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/Green</item>
-        <item name="borderlessButtonStyle">@color/Black</item>
+        <item name="borderlessButtonStyle">@color/Gray</item>
         <item name="colorPrimaryDark">@color/Gray</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:actionBarStyle">@style/MyActionBar</item>

@@ -292,7 +292,6 @@
         android:id="@+id/btnOrder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/btn_bordeado_azul"
         android:elevation="10dp"
         android:text="@string/order"
         android:textColor="@color/White"

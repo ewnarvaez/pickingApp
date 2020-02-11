@@ -3,7 +3,7 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/Gray</item>
+        <item name="colorPrimary">@color/Blue</item>
         <item name="colorPrimaryDark">@color/Gray</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:actionBarStyle">@style/MyActionBar</item>
