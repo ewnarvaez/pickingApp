@@ -94,14 +94,16 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
 
                     Auth auth = response.body();
-                    if (auth.getMessage().equals("Successfully login.")) {
-
+                    if (auth != null && auth.getMessage().equals("Successfully login.")) {
                         intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
                         startActivity(intent);
                     }
+                    else {
+                        tvErrors.setText((auth.getMessage()));
+                    }
                 }
                 else {
-                    tvErrors.setText(response.code());
+                    //tvErrors.setText((String.valueOf(response.code())));
                     tvErrors.setText("Contraseña o password incorrectos");
                     return;
                 }
