@@ -15,9 +15,10 @@
         tools:ignore="GoogleAppIndexingWarning"
         >
         <activity android:name=".ClientDetailActivity" />
-        <activity android:name=".BottomNavigationActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ClientEditActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".BottomNavigationActivity"
+            android:theme="@style/AppTheme_01">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
