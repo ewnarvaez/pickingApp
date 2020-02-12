@@ -103,8 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 else {
-                    //tvErrors.setText((String.valueOf(response.code())));
-                    tvErrors.setText("Contraseña o password incorrectos");
+                    tvErrors.setText((String.valueOf(response.code())));
                     return;
                 }
             }
@@ -112,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<Auth> call, Throwable t) {
 
-                tvErrors.setText("Error en el llamado de la api");
+                tvErrors.setText(t.getMessage());
             }
         });
 

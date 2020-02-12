@@ -45,11 +45,13 @@ public class BottomNavigationActivity extends AppCompatActivity {
                     case R.id.navigation_search:
                         setFragment(searchFragment);
                         menuItem.setChecked(true);
+                        getSupportActionBar().show();
                         break;
 
                     case R.id.navigation_order:
                         setFragment(orderFragment);
                         menuItem.setChecked(true);
+                        getSupportActionBar().hide();
                         break;
 
 //                    case R.id.navigation_update:
