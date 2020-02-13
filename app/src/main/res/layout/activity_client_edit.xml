@@ -120,11 +120,11 @@
         android:id="@+id/tvNombreCliente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
@@ -146,11 +146,11 @@
         android:id="@+id/tvDocumento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
@@ -226,8 +226,8 @@
         android:layout_height="0dp"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline17"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline29"></Spinner>
 
     <TextView
