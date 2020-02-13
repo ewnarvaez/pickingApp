@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/fondo_azul"
+    android:background="@drawable/fondo_gris"
     tools:context=".ClientEditActivity">
 
     <ImageView
@@ -14,11 +14,79 @@
         android:layout_height="0dp"
         android:contentDescription="@string/logo_description"
         android:src="@drawable/fondo_blanco"
-        app:layout_constraintBottom_toTopOf="@+id/guideline35"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEdit">
-    </ImageView>
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline21" />
+
+    <ImageView
+        android:id="@+id/fondo_blanco_01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
+
+    <ImageView
+        android:id="@+id/fondo_blanco_02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+
+    <ImageView
+        android:id="@+id/fondo_blanco_03"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
+
+    <ImageView
+        android:id="@+id/fondo_blanco_04"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline29" />
+
+    <ImageView
+        android:id="@+id/fondo_blanco_05"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline32"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline31" />
+
+    <ImageView
+        android:id="@+id/fondo_blanco_06"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/fondo_blanco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline34"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline33" />
+
+
+
 
     <TextView
         android:id="@+id/tvEdit"
@@ -26,7 +94,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="@string/edit_user"
-        android:textColor="@color/White"
+        android:textColor="@color/Black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -45,7 +113,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
     <TextView
@@ -71,7 +139,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
     <TextView
@@ -97,18 +165,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
     <EditText
         android:id="@+id/etCiudad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
@@ -123,18 +191,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <EditText
         android:id="@+id/etTel01"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
@@ -149,18 +217,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
     <Spinner
         android:id="@+id/spStatus"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline29">
-    </Spinner>
+        app:layout_constraintTop_toTopOf="@+id/guideline29"></Spinner>
 
     <TextView
         android:id="@+id/editText6"
@@ -173,18 +241,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline32"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
     <EditText
         android:id="@+id/etNegocio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline32"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
@@ -199,18 +267,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline34"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline33" />
 
     <EditText
         android:id="@+id/etCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/guideline34"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline33" />
 
@@ -251,7 +319,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.02" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -377,7 +445,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.98" />
+
+
 
     <!-- CUADRICULA DE GUIAS HORIZONTALES -->
 

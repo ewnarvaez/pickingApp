@@ -14,11 +14,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         >
-        <activity android:name=".ClientDetailActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ClientEditActivity" />
+        <activity android:name=".ClientDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ClientEditActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".BottomNavigationActivity"
             android:theme="@style/AppTheme_01"
+            android:screenOrientation="portrait"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
