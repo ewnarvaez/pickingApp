@@ -27,17 +27,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_CLIENT_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "("
                 + Util.KEY_CODIGO + " TEXT PRIMARY KEY, " + Util.KEY_NOMBRE +
                 " TEXT, " + Util.KEY_APELLIDOS + " TEXT, " + Util.KEY_CCNIT + " TEXT, "
-                + Util.KEY_DV + " TEXT, " + Util.KEY_TIPOCID + " TEXT, "
+                + Util.KEY_DV + " TEXT, " + Util.KEY_TIPODOCID + " TEXT, "
                 + Util.KEY_EMPRESA + " TEXT, " + Util.KEY_REGIMEN + " TEXT, "
-                + Util.KEY_NATURALEZA + " TEXT, " + Util.KEY_DIRECCION + "TEXT, "
-                + Util.KEY_CODBARRIO + " TEXT, " + Util.KEY_CODCIUDAD + "TEXT, "
-                + Util.KEY_CODPAIS + " TEXT, " + Util.KEY_TELEFONO + "TEXT, "
-                + Util.KEY_CELULAR + " TEXT, " + Util.KEY_EMAIL + "TEXT, "
-                + Util.KEY_CODACTIVECO + " TEXT, " + Util.KEY_CODTIPOTERC + "TEXT, "
-                + Util.KEY_CODZONA + " TEXT, " + Util.KEY_CONTACTO + "TEXT, "
-                + Util.KEY_GRANCONTRIBUYENTE + " TEXT, " + Util.KEY_ENTIDADESTATAL + "TEXT, "
-                + Util.KEY_NODOMICILIADO + " TEXT, " + Util.KEY_AUTORETENEDOR + "TEXT, "
-                + Util.KEY_AGENTERETRENTA + " TEXT, " + Util.KEY_AGENTERETIVA + "TEXT, "
+                + Util.KEY_NATURALEZA + " TEXT, " + Util.KEY_DIRECCION + " TEXT, "
+                + Util.KEY_CODBARRIO + " TEXT, " + Util.KEY_CODCIUDAD + " TEXT, "
+                + Util.KEY_CODPAIS + " TEXT, " + Util.KEY_TELEFONO + " TEXT, "
+                + Util.KEY_CELULAR + " TEXT, " + Util.KEY_EMAIL + " TEXT, "
+                + Util.KEY_CODACTIVECO + " TEXT, " + Util.KEY_CODTIPOTERC + " TEXT, "
+                + Util.KEY_CODZONA + " TEXT, " + Util.KEY_CONTACTO + " TEXT, "
+                + Util.KEY_GRANCONTRIBUYENTE + " TEXT, " + Util.KEY_ENTIDADESTATAL + " TEXT, "
+                + Util.KEY_NODOMICILIADO + " TEXT, " + Util.KEY_AUTORETENEDOR + " TEXT, "
+                + Util.KEY_AGENTERETRENTA + " TEXT, " + Util.KEY_AGENTERETIVA + " TEXT, "
                 + Util.KEY_ESTADO +
                 ")";
 
@@ -67,7 +67,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Util.KEY_APELLIDOS, client.getApellidos());
         values.put(Util.KEY_CCNIT, client.getCcnit());
         values.put(Util.KEY_DV, client.getDv());
-        values.put(Util.KEY_TIPOCID, client.getTipocid());
+        values.put(Util.KEY_TIPODOCID, client.getTipodocid());
         values.put(Util.KEY_EMPRESA, client.getEmpresa());
         values.put(Util.KEY_REGIMEN, client.getRegimen());
         values.put(Util.KEY_NATURALEZA, client.getNaturaleza());
@@ -101,7 +101,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase(); // Allow us use database in readable mode
         // Creating cursor to move into database rows
         Cursor cursor = db.query(Util.TABLE_NAME, new String[]{Util.KEY_CODIGO, Util.KEY_NOMBRE, Util.KEY_APELLIDOS,
-        Util.KEY_CCNIT, Util.KEY_DV, Util.KEY_TIPOCID, Util.KEY_EMPRESA, Util.KEY_REGIMEN, Util.KEY_NATURALEZA,
+        Util.KEY_CCNIT, Util.KEY_DV, Util.KEY_TIPODOCID, Util.KEY_EMPRESA, Util.KEY_REGIMEN, Util.KEY_NATURALEZA,
                         Util.KEY_DIRECCION, Util.KEY_CODBARRIO, Util.KEY_CODCIUDAD, Util.KEY_CODPAIS, Util.KEY_TELEFONO,
                         Util.KEY_CELULAR, Util.KEY_EMAIL, Util.KEY_CODACTIVECO, Util.KEY_CODTIPOTERC, Util.KEY_CODZONA,
                         Util.KEY_CONTACTO, Util.KEY_GRANCONTRIBUYENTE, Util.KEY_ENTIDADESTATAL, Util.KEY_NODOMICILIADO,
@@ -118,7 +118,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         client.setApellidos(cursor.getString(2));
         client.setCcnit(cursor.getString(3));
         client.setDv(cursor.getString(4));
-        client.setTipocid(cursor.getString(5));
+        client.setTipodocid(cursor.getString(5));
         client.setEmpresa(cursor.getString(6));
         client.setRegimen(cursor.getString(7));
         client.setNaturaleza(cursor.getString(8));
@@ -162,7 +162,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 client.setApellidos(cursor.getString(2));
                 client.setCcnit(cursor.getString(3));
                 client.setDv(cursor.getString(4));
-                client.setTipocid(cursor.getString(5));
+                client.setTipodocid(cursor.getString(5));
                 client.setEmpresa(cursor.getString(6));
                 client.setRegimen(cursor.getString(7));
                 client.setNaturaleza(cursor.getString(8));
@@ -204,7 +204,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Util.KEY_APELLIDOS, client.getApellidos());
         values.put(Util.KEY_CCNIT, client.getCcnit());
         values.put(Util.KEY_DV, client.getDv());
-        values.put(Util.KEY_TIPOCID, client.getTipocid());
+        values.put(Util.KEY_TIPODOCID, client.getTipodocid());
         values.put(Util.KEY_EMPRESA, client.getEmpresa());
         values.put(Util.KEY_REGIMEN, client.getRegimen());
         values.put(Util.KEY_NATURALEZA, client.getNaturaleza());

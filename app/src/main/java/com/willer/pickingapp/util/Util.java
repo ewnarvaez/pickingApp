@@ -2,7 +2,7 @@ package com.willer.pickingapp.util;
 
 public class Util {
 
-    public static final int DATABASE_VERSION = 6;
+    public static final int DATABASE_VERSION = 7;
     public static final String DATABASE_NAME = "mayorista";
     public static final String TABLE_NAME = "clientes";
     // Columns
@@ -11,7 +11,7 @@ public class Util {
     public static final String KEY_APELLIDOS = "apellidos";
     public static final String KEY_CCNIT = "ccnit";
     public static final String KEY_DV = "dv";
-    public static final String KEY_TIPOCID = "tipocid";
+    public static final String KEY_TIPODOCID = "tipodocid";
     public static final String KEY_EMPRESA = "empresa";
     public static final String KEY_REGIMEN = "regimen";
     public static final String KEY_NATURALEZA = "naturaleza";

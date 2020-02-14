@@ -7,7 +7,7 @@ public class Client {
   private String apellidos;
   private String ccnit;
   private String dv;
-  private String tipocid;
+  private String tipodocid;
   private String empresa;
   private String regimen;
   private String naturaleza;
@@ -74,12 +74,12 @@ public class Client {
     this.dv = dv;
   }
 
-  public String getTipocid() {
-    return tipocid;
+  public String getTipodocid() {
+    return tipodocid;
   }
 
-  public void setTipocid(String tipocid) {
-    this.tipocid = tipocid;
+  public void setTipodocid(String tipodocid) {
+    this.tipodocid = tipodocid;
   }
 
   public String getEmpresa() {
