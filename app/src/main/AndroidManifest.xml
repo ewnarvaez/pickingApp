@@ -17,11 +17,12 @@
         <activity android:name=".ClientDetailActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".BottomNavigationActivity"
+            android:theme="@style/AppTheme_01"
             android:screenOrientation="portrait"/>
         <activity android:name=".ClientEditActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme_01"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             >
             <intent-filter>
