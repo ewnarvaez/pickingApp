@@ -45,8 +45,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Client client = clientArrayList.get(position);
-        holder.clientName.setText(client.getName());
-        holder.clientMainPhone.setText(client.getMainPhoneNumber());
+        holder.clientName.setText(client.getNombre());
+        holder.clientMainPhone.setText(client.getTelefono());
     }
 
     @Override
@@ -75,13 +75,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             Client client = clientArrayList.get(position); // Get client object
             // Intent creation
             Intent intent = new Intent(context, ClientDetailActivity.class);
-            intent.putExtra("id", client.getId());
-            intent.putExtra("name", client.getName());
-            intent.putExtra("dni", client.getDni());
-            intent.putExtra("city", client.getCity());
-            intent.putExtra("mainPhone", client.getMainPhoneNumber());
-            intent.putExtra("status", client.getStatus());
-            intent.putExtra("company", client.getCompany());
+            intent.putExtra("id", client.getCodigo());
+            intent.putExtra("name", client.getNombre());
+            intent.putExtra("dni", client.getCcnit());
+            intent.putExtra("city", client.getCodciudad());
+            intent.putExtra("mainPhone", client.getTelefono());
+            intent.putExtra("status", client.getEstado());
+            intent.putExtra("company", client.getEmpresa());
             intent.putExtra("email", client.getEmail());
 
             // Sending the intent
@@ -106,7 +106,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             } else {
                 for (Client client: clientArrayList) {
 
-                    if (client.getName().toLowerCase().contains(charSequence.toString().toLowerCase())) {
+                    if (client.getNombre().toLowerCase().contains(charSequence.toString().toLowerCase())) {
 
                         filteredList.add(client);
                     }

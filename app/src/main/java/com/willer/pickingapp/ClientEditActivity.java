@@ -130,24 +130,24 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
             case R.id.btnUpdate:
                 Client client = new Client();
                 DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-                client = db.getClient(bundle.getInt("id"));
-                client.setCity(etCity.getText().toString());
-                client.setMainPhoneNumber(etMainPhone.getText().toString());
-                client.setStatus(spStatus.getSelectedItem().toString());
-                client.setCompany(etCompany.getText().toString());
+                client = db.getClient(bundle.getString("id"));
+                client.setCodciudad(etCity.getText().toString());
+                client.setTelefono(etMainPhone.getText().toString());
+                client.setEstado(spStatus.getSelectedItem().toString());
+                client.setEmpresa(etCompany.getText().toString());
                 client.setEmail(etEmail.getText().toString());
 
                 // Client update action
                 db.updateClient(client);
 
                 Intent intent = new Intent(getApplicationContext(), ClientDetailActivity.class);
-                intent.putExtra("id", client.getId());
-                intent.putExtra("name", client.getName());
-                intent.putExtra("dni", client.getDni());
-                intent.putExtra("city", client.getCity());
-                intent.putExtra("mainPhone", client.getMainPhoneNumber());
-                intent.putExtra("status", client.getStatus());
-                intent.putExtra("company", client.getCompany());
+                intent.putExtra("id", client.getCodigo());
+                intent.putExtra("name", client.getNombre());
+                intent.putExtra("dni", client.getCcnit());
+                intent.putExtra("city", client.getCodciudad());
+                intent.putExtra("mainPhone", client.getTelefono());
+                intent.putExtra("status", client.getEstado());
+                intent.putExtra("company", client.getEmpresa());
                 intent.putExtra("email", client.getEmail());
 
                 // Sending the intent

@@ -25,11 +25,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Client table creation
         String CREATE_CLIENT_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "("
-                + Util.KEY_ID + " INTEGER PRIMARY KEY, " + Util.KEY_NAME +
-                " TEXT, " + Util.KEY_DNI + " TEXT, " + Util.KEY_CITY + " TEXT, "
-                + Util.KEY_MAIN_PN + " TEXT, " + Util.KEY_SECOND_PN + " TEXT, "
-                + Util.KEY_COMPANY + " TEXT, " + Util.KEY_EMAIL + " TEXT, "
-                + Util.KEY_STATUS + " TEXT" + ")";
+                + Util.KEY_CODIGO + " TEXT PRIMARY KEY, " + Util.KEY_NOMBRE +
+                " TEXT, " + Util.KEY_APELLIDOS + " TEXT, " + Util.KEY_CCNIT + " TEXT, "
+                + Util.KEY_DV + " TEXT, " + Util.KEY_TIPOCID + " TEXT, "
+                + Util.KEY_EMPRESA + " TEXT, " + Util.KEY_REGIMEN + " TEXT, "
+                + Util.KEY_NATURALEZA + " TEXT, " + Util.KEY_DIRECCION + "TEXT, "
+                + Util.KEY_CODBARRIO + " TEXT, " + Util.KEY_CODCIUDAD + "TEXT, "
+                + Util.KEY_CODPAIS + " TEXT, " + Util.KEY_TELEFONO + "TEXT, "
+                + Util.KEY_CELULAR + " TEXT, " + Util.KEY_EMAIL + "TEXT, "
+                + Util.KEY_CODACTIVECO + " TEXT, " + Util.KEY_CODTIPOTERC + "TEXT, "
+                + Util.KEY_CODZONA + " TEXT, " + Util.KEY_CONTACTO + "TEXT, "
+                + Util.KEY_GRANCONTRIBUYENTE + " TEXT, " + Util.KEY_ENTIDADESTATAL + "TEXT, "
+                + Util.KEY_NODOMICILIADO + " TEXT, " + Util.KEY_AUTORETENEDOR + "TEXT, "
+                + Util.KEY_AGENTERETRENTA + " TEXT, " + Util.KEY_AGENTERETIVA + "TEXT, "
+                + Util.KEY_ESTADO +
+                ")";
 
         db.execSQL(CREATE_CLIENT_TABLE);
     }
@@ -52,14 +62,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase(); // Allow us use database in writable mode
 
         ContentValues values = new ContentValues();
-        values.put(Util.KEY_NAME, client.getName());
-        values.put(Util.KEY_DNI, client.getDni());
-        values.put(Util.KEY_CITY, client.getCity());
-        values.put(Util.KEY_MAIN_PN, client.getMainPhoneNumber());
-        values.put(Util.KEY_SECOND_PN, client.getSecondPhoneNumber());
-        values.put(Util.KEY_COMPANY, client.getCompany());
+        values.put(Util.KEY_CODIGO, client.getCodigo());
+        values.put(Util.KEY_NOMBRE, client.getNombre());
+        values.put(Util.KEY_APELLIDOS, client.getApellidos());
+        values.put(Util.KEY_CCNIT, client.getCcnit());
+        values.put(Util.KEY_DV, client.getDv());
+        values.put(Util.KEY_TIPOCID, client.getTipocid());
+        values.put(Util.KEY_EMPRESA, client.getEmpresa());
+        values.put(Util.KEY_REGIMEN, client.getRegimen());
+        values.put(Util.KEY_NATURALEZA, client.getNaturaleza());
+        values.put(Util.KEY_DIRECCION, client.getDireccion());
+        values.put(Util.KEY_CODBARRIO, client.getCodbarrio());
+        values.put(Util.KEY_CODCIUDAD, client.getCodciudad());
+        values.put(Util.KEY_CODPAIS, client.getCodpais());
+        values.put(Util.KEY_TELEFONO, client.getTelefono());
+        values.put(Util.KEY_CELULAR, client.getCelular());
         values.put(Util.KEY_EMAIL, client.getEmail());
-        values.put(Util.KEY_STATUS, client.getStatus());
+        values.put(Util.KEY_CODACTIVECO, client.getCodactiveco());
+        values.put(Util.KEY_CODTIPOTERC, client.getCodtipoterc());
+        values.put(Util.KEY_CODZONA, client.getCodzona());
+        values.put(Util.KEY_CONTACTO, client.getContacto());
+        values.put(Util.KEY_GRANCONTRIBUYENTE, client.getGrancontribuyente());
+        values.put(Util.KEY_ENTIDADESTATAL, client.getEntidadestatal());
+        values.put(Util.KEY_NODOMICILIADO, client.getNodomiciliado());
+        values.put(Util.KEY_AUTORETENEDOR, client.getAutoretenedor());
+        values.put(Util.KEY_AGENTERETRENTA, client.getAgenteretrenta());
+        values.put(Util.KEY_AGENTERETIVA, client.getAgenteretiva());
+        values.put(Util.KEY_ESTADO, client.getEstado());
 
         // Insert a row
         db.insert(Util.TABLE_NAME, null, values);
@@ -67,27 +96,50 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     // Get a client - READ
-    public Client getClient(int id) {
+    public Client getClient(String codigo) {
 
         SQLiteDatabase db = this.getReadableDatabase(); // Allow us use database in readable mode
         // Creating cursor to move into database rows
-        Cursor cursor = db.query(Util.TABLE_NAME, new String[]{Util.KEY_ID, Util.KEY_NAME, Util.KEY_DNI,
-        Util.KEY_CITY, Util.KEY_MAIN_PN, Util.KEY_SECOND_PN, Util.KEY_COMPANY, Util.KEY_EMAIL, Util.KEY_STATUS},
-                Util.KEY_ID + "=?", new String[]{String.valueOf(id)}, null, null,
+        Cursor cursor = db.query(Util.TABLE_NAME, new String[]{Util.KEY_CODIGO, Util.KEY_NOMBRE, Util.KEY_APELLIDOS,
+        Util.KEY_CCNIT, Util.KEY_DV, Util.KEY_TIPOCID, Util.KEY_EMPRESA, Util.KEY_REGIMEN, Util.KEY_NATURALEZA,
+                        Util.KEY_DIRECCION, Util.KEY_CODBARRIO, Util.KEY_CODCIUDAD, Util.KEY_CODPAIS, Util.KEY_TELEFONO,
+                        Util.KEY_CELULAR, Util.KEY_EMAIL, Util.KEY_CODACTIVECO, Util.KEY_CODTIPOTERC, Util.KEY_CODZONA,
+                        Util.KEY_CONTACTO, Util.KEY_GRANCONTRIBUYENTE, Util.KEY_ENTIDADESTATAL, Util.KEY_NODOMICILIADO,
+                        Util.KEY_AUTORETENEDOR, Util.KEY_AGENTERETRENTA, Util.KEY_AGENTERETIVA, Util.KEY_ESTADO
+                },
+                Util.KEY_CODIGO + "=?", new String[]{codigo}, null, null,
                 null, null);
 
         if (cursor != null) cursor.moveToFirst();
 
         Client client = new Client();
-        client.setId(Integer.parseInt(cursor.getString(0)));
-        client.setName(cursor.getString(1));
-        client.setDni(cursor.getString(2));
-        client.setCity(cursor.getString(3));
-        client.setMainPhoneNumber(cursor.getString(4));
-        client.setSecondPhoneNumber(cursor.getString(5));
-        client.setCompany(cursor.getString(6));
-        client.setEmail(cursor.getString(7));
-        client.setStatus(cursor.getString(8));
+        client.setCodigo((cursor.getString(0)));
+        client.setNombre(cursor.getString(1));
+        client.setApellidos(cursor.getString(2));
+        client.setCcnit(cursor.getString(3));
+        client.setDv(cursor.getString(4));
+        client.setTipocid(cursor.getString(5));
+        client.setEmpresa(cursor.getString(6));
+        client.setRegimen(cursor.getString(7));
+        client.setNaturaleza(cursor.getString(8));
+        client.setDireccion(cursor.getString(9));
+        client.setCodbarrio(cursor.getString(10));
+        client.setCodciudad(cursor.getString(11));
+        client.setCodpais(cursor.getString(12));
+        client.setTelefono(cursor.getString(13));
+        client.setCelular(cursor.getString(14));
+        client.setEmail(cursor.getString(15));
+        client.setCodactiveco(cursor.getString(16));
+        client.setCodtipoterc(cursor.getString(17));
+        client.setCodzona(cursor.getString(18));
+        client.setContacto(cursor.getString(19));
+        client.setGrancontribuyente(cursor.getString(20));
+        client.setEntidadestatal(cursor.getString(21));
+        client.setNodomiciliado(cursor.getString(22));
+        client.setAutoretenedor(cursor.getString(23));
+        client.setAgenteretrenta(cursor.getString(24));
+        client.setAgenteretiva(cursor.getString(25));
+        client.setEstado(cursor.getString(26));
 
         return client;
     }
@@ -105,15 +157,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             do {
 
                 Client client = new Client();
-                client.setId(Integer.parseInt(cursor.getString(0)));
-                client.setName(cursor.getString(1));
-                client.setDni(cursor.getString(2));
-                client.setCity(cursor.getString(3));
-                client.setMainPhoneNumber(cursor.getString(4));
-                client.setSecondPhoneNumber(cursor.getString(5));
-                client.setCompany(cursor.getString(6));
-                client.setEmail(cursor.getString(7));
-                client.setStatus(cursor.getString(8));
+                client.setCodigo((cursor.getString(0)));
+                client.setNombre(cursor.getString(1));
+                client.setApellidos(cursor.getString(2));
+                client.setCcnit(cursor.getString(3));
+                client.setDv(cursor.getString(4));
+                client.setTipocid(cursor.getString(5));
+                client.setEmpresa(cursor.getString(6));
+                client.setRegimen(cursor.getString(7));
+                client.setNaturaleza(cursor.getString(8));
+                client.setDireccion(cursor.getString(9));
+                client.setCodbarrio(cursor.getString(10));
+                client.setCodciudad(cursor.getString(11));
+                client.setCodpais(cursor.getString(12));
+                client.setTelefono(cursor.getString(13));
+                client.setCelular(cursor.getString(14));
+                client.setEmail(cursor.getString(15));
+                client.setCodactiveco(cursor.getString(16));
+                client.setCodtipoterc(cursor.getString(17));
+                client.setCodzona(cursor.getString(18));
+                client.setContacto(cursor.getString(19));
+                client.setGrancontribuyente(cursor.getString(20));
+                client.setEntidadestatal(cursor.getString(21));
+                client.setNodomiciliado(cursor.getString(22));
+                client.setAutoretenedor(cursor.getString(23));
+                client.setAgenteretrenta(cursor.getString(24));
+                client.setAgenteretiva(cursor.getString(25));
+                client.setEstado(cursor.getString(26));
 
                 // Add client object to the list
                 clientList.add(client);
@@ -129,24 +199,43 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(Util.KEY_NAME, client.getName());
-        values.put(Util.KEY_DNI, client.getDni());
-        values.put(Util.KEY_CITY, client.getCity());
-        values.put(Util.KEY_MAIN_PN, client.getMainPhoneNumber());
-        values.put(Util.KEY_SECOND_PN, client.getSecondPhoneNumber());
-        values.put(Util.KEY_COMPANY, client.getCompany());
+        values.put(Util.KEY_CODIGO, client.getCodigo());
+        values.put(Util.KEY_NOMBRE, client.getNombre());
+        values.put(Util.KEY_APELLIDOS, client.getApellidos());
+        values.put(Util.KEY_CCNIT, client.getCcnit());
+        values.put(Util.KEY_DV, client.getDv());
+        values.put(Util.KEY_TIPOCID, client.getTipocid());
+        values.put(Util.KEY_EMPRESA, client.getEmpresa());
+        values.put(Util.KEY_REGIMEN, client.getRegimen());
+        values.put(Util.KEY_NATURALEZA, client.getNaturaleza());
+        values.put(Util.KEY_DIRECCION, client.getDireccion());
+        values.put(Util.KEY_CODBARRIO, client.getCodbarrio());
+        values.put(Util.KEY_CODCIUDAD, client.getCodciudad());
+        values.put(Util.KEY_CODPAIS, client.getCodpais());
+        values.put(Util.KEY_TELEFONO, client.getTelefono());
+        values.put(Util.KEY_CELULAR, client.getCelular());
         values.put(Util.KEY_EMAIL, client.getEmail());
-        values.put(Util.KEY_STATUS, client.getStatus());
+        values.put(Util.KEY_CODACTIVECO, client.getCodactiveco());
+        values.put(Util.KEY_CODTIPOTERC, client.getCodtipoterc());
+        values.put(Util.KEY_CODZONA, client.getCodzona());
+        values.put(Util.KEY_CONTACTO, client.getContacto());
+        values.put(Util.KEY_GRANCONTRIBUYENTE, client.getGrancontribuyente());
+        values.put(Util.KEY_ENTIDADESTATAL, client.getEntidadestatal());
+        values.put(Util.KEY_NODOMICILIADO, client.getNodomiciliado());
+        values.put(Util.KEY_AUTORETENEDOR, client.getAutoretenedor());
+        values.put(Util.KEY_AGENTERETRENTA, client.getAgenteretrenta());
+        values.put(Util.KEY_AGENTERETIVA, client.getAgenteretiva());
+        values.put(Util.KEY_ESTADO, client.getEstado());
 
-        return db.update(Util.TABLE_NAME, values, Util.KEY_ID + "=?", new String[]{String.valueOf(client.getId())});
+        return db.update(Util.TABLE_NAME, values, Util.KEY_CODIGO + "=?", new String[]{String.valueOf(client.getCodigo())});
     }
 
     // DELETE
     public void deleteClient(Client client){
 
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(Util.TABLE_NAME, Util.KEY_ID + "=?",
-                new String[]{String.valueOf(client.getId())});
+        db.delete(Util.TABLE_NAME, Util.KEY_CODIGO + "=?",
+                new String[]{(client.getCodigo())});
         db.close();
     }
 

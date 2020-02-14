@@ -2,88 +2,156 @@ package com.willer.pickingapp.model;
 
 public class Client {
 
-  private int id;
-  private String name;
-  private String dni;
-  private String city;
-  private String mainPhoneNumber;
-  private String secondPhoneNumber;
-  private String company;
+  private String codigo;
+  private String nombre;
+  private String apellidos;
+  private String ccnit;
+  private String dv;
+  private String tipocid;
+  private String empresa;
+  private String regimen;
+  private String naturaleza;
+  private String direccion;
+  private String codbarrio;
+  private String codciudad;
+  private String codpais;
+  private String telefono;
+  private String celular;
   private String email;
-  private String status;
+  private String codactiveco;
+  private String codtipoterc;
+  private String codzona;
+  private String contacto;
+  private String grancontribuyente;
+  private String entidadestatal;
+  private String nodomiciliado;
+  private String autoretenedor;
+  private String agenteretrenta;
+  private String agenteretiva;
+  private String estado;
+
 
   public Client() {
   }
 
-  public Client(int id, String name, String dni, String city, String mainPhoneNumber,
-                String secondPhoneNumber, String company, String email, String status) {
-
-    this.id = id;
-    this.name = name;
-    this.dni = dni;
-    this.city = city;
-    this.mainPhoneNumber = mainPhoneNumber;
-    this.secondPhoneNumber = secondPhoneNumber;
-    this.company = company;
-    this.email = email;
-    this.status = status;
+  public String getCodigo() {
+    return codigo;
   }
 
-  public int getId() {
-    return id;
+  public void setCodigo(String codigo) {
+    this.codigo = codigo;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public String getNombre() {
+    return nombre;
   }
 
-  public String getName() {
-    return name;
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public String getApellidos() {
+    return apellidos;
   }
 
-  public String getDni() {
-    return dni;
+  public void setApellidos(String apellidos) {
+    this.apellidos = apellidos;
   }
 
-  public void setDni(String dni) {
-    this.dni = dni;
+  public String getCcnit() {
+    return ccnit;
   }
 
-  public String getCity() {
-    return city;
+  public void setCcnit(String ccnit) {
+    this.ccnit = ccnit;
   }
 
-  public void setCity(String city) {
-    this.city = city;
+  public String getDv() {
+    return dv;
   }
 
-  public String getMainPhoneNumber() {
-    return mainPhoneNumber;
+  public void setDv(String dv) {
+    this.dv = dv;
   }
 
-  public void setMainPhoneNumber(String mainPhoneNumber) {
-
-    this.mainPhoneNumber = mainPhoneNumber;
+  public String getTipocid() {
+    return tipocid;
   }
 
-  public String getSecondPhoneNumber() {
-    return secondPhoneNumber;
+  public void setTipocid(String tipocid) {
+    this.tipocid = tipocid;
   }
 
-  public void setSecondPhoneNumber(String secondPhoneNumber) {
-    this.secondPhoneNumber = secondPhoneNumber;
+  public String getEmpresa() {
+    return empresa;
   }
 
-  public String getCompany() {
-    return company;
+  public void setEmpresa(String empresa) {
+    this.empresa = empresa;
   }
 
-  public void setCompany(String company) {
-    this.company = company;
+  public String getRegimen() {
+    return regimen;
+  }
+
+  public void setRegimen(String regimen) {
+    this.regimen = regimen;
+  }
+
+  public String getNaturaleza() {
+    return naturaleza;
+  }
+
+  public void setNaturaleza(String naturaleza) {
+    this.naturaleza = naturaleza;
+  }
+
+  public String getDireccion() {
+    return direccion;
+  }
+
+  public void setDireccion(String direccion) {
+    this.direccion = direccion;
+  }
+
+  public String getCodbarrio() {
+    return codbarrio;
+  }
+
+  public void setCodbarrio(String codbarrio) {
+    this.codbarrio = codbarrio;
+  }
+
+  public String getCodciudad() {
+    return codciudad;
+  }
+
+  public void setCodciudad(String codciudad) {
+    this.codciudad = codciudad;
+  }
+
+  public String getCodpais() {
+    return codpais;
+  }
+
+  public void setCodpais(String codpais) {
+    this.codpais = codpais;
+  }
+
+  public String getTelefono() {
+    return telefono;
+  }
+
+  public void setTelefono(String telefono) {
+    this.telefono = telefono;
+  }
+
+  public String getCelular() {
+    return celular;
+  }
+
+  public void setCelular(String celular) {
+    this.celular = celular;
   }
 
   public String getEmail() {
@@ -94,12 +162,91 @@ public class Client {
     this.email = email;
   }
 
-  public String getStatus(){
-    return status;
+  public String getCodactiveco() {
+    return codactiveco;
   }
 
-  public void setStatus(String status) {
-    this.status = status;
+  public void setCodactiveco(String codactiveco) {
+    this.codactiveco = codactiveco;
   }
 
+  public String getCodtipoterc() {
+    return codtipoterc;
+  }
+
+  public void setCodtipoterc(String codtipoterc) {
+    this.codtipoterc = codtipoterc;
+  }
+
+  public String getCodzona() {
+    return codzona;
+  }
+
+  public void setCodzona(String codzona) {
+    this.codzona = codzona;
+  }
+
+  public String getContacto() {
+    return contacto;
+  }
+
+  public void setContacto(String contacto) {
+    this.contacto = contacto;
+  }
+
+  public String getGrancontribuyente() {
+    return grancontribuyente;
+  }
+
+  public void setGrancontribuyente(String grancontribuyente) {
+    this.grancontribuyente = grancontribuyente;
+  }
+
+  public String getEntidadestatal() {
+    return entidadestatal;
+  }
+
+  public void setEntidadestatal(String entidadestatal) {
+    this.entidadestatal = entidadestatal;
+  }
+
+  public String getNodomiciliado() {
+    return nodomiciliado;
+  }
+
+  public void setNodomiciliado(String nodomiciliado) {
+    this.nodomiciliado = nodomiciliado;
+  }
+
+  public String getAutoretenedor() {
+    return autoretenedor;
+  }
+
+  public void setAutoretenedor(String autoretenedor) {
+    this.autoretenedor = autoretenedor;
+  }
+
+  public String getAgenteretrenta() {
+    return agenteretrenta;
+  }
+
+  public void setAgenteretrenta(String agenteretrenta) {
+    this.agenteretrenta = agenteretrenta;
+  }
+
+  public String getAgenteretiva() {
+    return agenteretiva;
+  }
+
+  public void setAgenteretiva(String agenteretiva) {
+    this.agenteretiva = agenteretiva;
+  }
+
+  public String getEstado() {
+    return estado;
+  }
+
+  public void setEstado(String estado) {
+    this.estado = estado;
+  }
 }

@@ -14,6 +14,8 @@ import com.willer.pickingapp.data.DatabaseHandler;
 import com.willer.pickingapp.model.Auth;
 import com.willer.pickingapp.model.Client;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView tvErrors;
     Intent intent;
+    private DatabaseHandler db;
 
     private static final String TAG = "MainActivity";
 
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        db = new DatabaseHandler(getApplicationContext());
 
         getSupportActionBar().hide(); // HIDE ACTION BAR
 
@@ -95,6 +100,44 @@ public class MainActivity extends AppCompatActivity {
 
                     Auth auth = response.body();
                     if (auth != null && auth.getMessage().equals("Successfully login.")) {
+
+                        String authHeader = auth.getToken();
+                        Retrofit retrofit = new Retrofit.Builder()
+                                .baseUrl("http://192.168.0.5:8080/RestApi/index.php/")
+                                .addConverterFactory(GsonConverterFactory.create())
+                                .build();
+
+                        RestApi restApi = retrofit.create(RestApi.class);
+                        Call<List<Client>> callClient = restApi.getClientList(authHeader);
+                        callClient.enqueue(new Callback<List<Client>>() {
+                            @Override
+                            public void onResponse(Call<List<Client>> call, Response<List<Client>> response) {
+                                if (response.isSuccessful()) {
+                                    List<Client> clientList = response.body();
+                                    if (clientList != null) {
+
+                                        for (Client client: clientList) {
+
+                                            db.addClient(client);
+                                        }
+                                    }
+                                    else {
+                                        tvErrors.setText("Error en el cuerpo de la solicitud");
+                                    }
+                                }
+                                else {
+                                    tvErrors.setText((String.valueOf(response.code())));
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<Client>> call, Throwable t) {
+
+                                tvErrors.setText(t.getMessage());
+                            }
+                        });
+
+
                         intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
                         startActivity(intent);
                     }
@@ -114,19 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 tvErrors.setText(t.getMessage());
             }
         });
-
-//        if (username.equals("mmmm") ) {
-//            if (password.equals("1234")) {
-//                intent = new Intent(getApplicationContext(), BottomNavigationActivity.class);
-//                startActivity(intent);
-//            } else {
-//                tvErrors.setText("La contraseña no coincide con la registrada en la base de datos");
-//            }
-//        } else {
-//            tvErrors.setText("El usuario no existe en la base de datos");
-//        }
     }
-//
 }
 
 
