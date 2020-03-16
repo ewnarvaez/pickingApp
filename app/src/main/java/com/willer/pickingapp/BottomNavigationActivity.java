@@ -7,8 +7,6 @@ import android.widget.FrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.willer.pickingapp.ui.Order.OrderFragment;
 import com.willer.pickingapp.ui.searchClient.SearchFragment;
-import com.willer.pickingapp.ui.updateClient.UpdateFragment;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -32,36 +30,31 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.nav_view);
         frameLayout = findViewById(R.id.frameLayout);
-
         setFragment(searchFragment);
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(menuItem -> {
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
 
-                switch (menuItem.getItemId()) {
+                case R.id.navigation_search:
+                    setFragment(searchFragment);
+                    menuItem.setChecked(true);
+                    getSupportActionBar().show();
+                    break;
 
-                    case R.id.navigation_search:
-                        setFragment(searchFragment);
-                        menuItem.setChecked(true);
-                        getSupportActionBar().show();
-                        break;
-
-                    case R.id.navigation_order:
-                        setFragment(orderFragment);
-                        menuItem.setChecked(true);
-                        getSupportActionBar().hide();
-                        break;
+                case R.id.navigation_order:
+                    setFragment(orderFragment);
+                    menuItem.setChecked(true);
+                    getSupportActionBar().hide();
+                    break;
 
 //                    case R.id.navigation_update:
 //                        setFragment(updateFragment);
 //                        menuItem.setChecked(true);
 //                        break;
 
-                }
-                return false;
             }
+            return false;
         });
     }
 

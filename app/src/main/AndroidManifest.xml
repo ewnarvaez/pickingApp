@@ -12,18 +12,21 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        >
-        <activity android:name=".ClientDetailActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BottomNavigationActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ClientEditActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme_01"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ProductDetailActivity"></activity>
+        <activity
+            android:name=".ClientDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BottomNavigationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClientEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/AppTheme_01">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -11,22 +11,23 @@ import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import com.willer.pickingapp.ClientDetailActivity;
 import com.willer.pickingapp.R;
-import com.willer.pickingapp.data.DatabaseHandler;
-import com.willer.pickingapp.model.Client;
+import com.willer.pickingapp.data.AppDatabase;
+import com.willer.pickingapp.entities.Client;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements Filterable {
+public class ClientRecyclerViewAdapter extends RecyclerView.Adapter<ClientRecyclerViewAdapter.ViewHolder> implements Filterable {
 
     private Context context;
-    private List<Client> clientArrayList;
+    private ArrayList<Client> clientArrayList;
 
-    public RecyclerViewAdapter(Context context, List<Client> clientList) {
+    public ClientRecyclerViewAdapter(Context context, ArrayList<Client> clientList) {
         this.context = context;
         this.clientArrayList = clientList;
     }
@@ -57,10 +58,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public TextView clientName;
-        public TextView clientMainPhone;
+        private TextView clientName;
+        private TextView clientMainPhone;
 
-        public ViewHolder(@NonNull View itemView) {
+        private ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             itemView.setOnClickListener(this);
@@ -95,14 +96,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return filter;
     }
 
-    Filter filter = new Filter() {
+    private Filter filter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence charSequence) {
 
-            DatabaseHandler db = new DatabaseHandler(context.getApplicationContext());
+            //DatabaseHandler db = new DatabaseHandler(context.getApplicationContext());
             List<Client> filteredList = new ArrayList<>();
             if (charSequence.toString().isEmpty()) {
-                filteredList = db.getAllClients();
+
+                AppDatabase db = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "mayorista")
+                        .allowMainThreadQueries().build();
+                filteredList = db.clientDao().getAllClients();
             } else {
                 for (Client client: clientArrayList) {
 

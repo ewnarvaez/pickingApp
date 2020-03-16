@@ -137,7 +137,7 @@ public class ClientEditActivity extends AppCompatActivity implements View.OnClic
                 client.setEmpresa(etCompany.getText().toString());
                 client.setEmail(etEmail.getText().toString());
 
-                // Client update action
+                // ClientDao update action
                 db.updateClient(client);
 
                 Intent intent = new Intent(getApplicationContext(), ClientDetailActivity.class);

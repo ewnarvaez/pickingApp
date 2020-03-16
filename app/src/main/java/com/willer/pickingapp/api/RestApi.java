@@ -1,7 +1,9 @@
 package com.willer.pickingapp.api;
 
+import com.willer.pickingapp.entities.Price;
 import com.willer.pickingapp.model.Auth;
-import com.willer.pickingapp.model.Client;
+import com.willer.pickingapp.entities.Client;
+import com.willer.pickingapp.entities.Product;
 
 import java.util.List;
 
@@ -28,6 +30,24 @@ public interface RestApi {
             "Content-Type:  application/x-www-form-urlencoded",
             "User-ID: 1",
     })
-    @GET("client")
+    @GET("ClientController")
     Call<List<Client>> getClientList(@Header("Authorization") String authHeader);
+
+    @Headers({
+            "Client-Service: frontend-client",
+            "Auth-Key: simplerestapi",
+            "Content-Type:  application/x-www-form-urlencoded",
+            "User-ID: 1",
+    })
+    @GET("ProductController")
+    Call<List<Product>> getProductList(@Header("Authorization") String authHeader);
+
+    @Headers({
+            "Client-Service: frontend-client",
+            "Auth-Key: simplerestapi",
+            "Content-Type:  application/x-www-form-urlencoded",
+            "User-ID: 1",
+    })
+    @GET("PriceController")
+    Call<List<Price>> getPriceList(@Header("Authorization") String authHeader);
 }

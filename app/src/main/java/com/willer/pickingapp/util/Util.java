@@ -2,7 +2,7 @@ package com.willer.pickingapp.util;
 
 public class Util {
 
-    public static final int DATABASE_VERSION = 7;
+    public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "mayorista";
     public static final String TABLE_NAME = "clientes";
     // Columns
@@ -33,4 +33,6 @@ public class Util {
     public static final String KEY_AGENTERETRENTA = "agenteretrenta";
     public static final String KEY_AGENTERETIVA = "agenteretiva";
     public static final String KEY_ESTADO = "estado";
+
+    public static final String BASE_URL = "https://elmayorista.000webhostapp.com/RestApi/index.php/";
 }

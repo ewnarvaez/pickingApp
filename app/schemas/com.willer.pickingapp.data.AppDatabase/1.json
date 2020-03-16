@@ -1,0 +1,325 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "edc14930cc870a844c3639bedf960f3c",
+    "entities": [
+      {
+        "tableName": "clientes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigo` TEXT NOT NULL, `nombre` TEXT, `apellidos` TEXT, `ccnit` TEXT, `dv` TEXT, `tipodocid` TEXT, `empresa` TEXT, `regimen` TEXT, `naturaleza` TEXT, `direccion` TEXT, `codbarrio` TEXT, `codciudad` TEXT, `codpais` TEXT, `telefono` TEXT, `celular` TEXT, `email` TEXT, `codactiveco` TEXT, `codtipoterc` TEXT, `codzona` TEXT, `contacto` TEXT, `grancontribuyente` TEXT, `entidadestatal` TEXT, `nodomiciliado` TEXT, `autoretenedor` TEXT, `agenteretrenta` TEXT, `agenteretiva` TEXT, `estado` TEXT, PRIMARY KEY(`codigo`))",
+        "fields": [
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "apellidos",
+            "columnName": "apellidos",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ccnit",
+            "columnName": "ccnit",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dv",
+            "columnName": "dv",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipodocid",
+            "columnName": "tipodocid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "empresa",
+            "columnName": "empresa",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "regimen",
+            "columnName": "regimen",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "naturaleza",
+            "columnName": "naturaleza",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion",
+            "columnName": "direccion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codbarrio",
+            "columnName": "codbarrio",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codciudad",
+            "columnName": "codciudad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codpais",
+            "columnName": "codpais",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "celular",
+            "columnName": "celular",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codactiveco",
+            "columnName": "codactiveco",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codtipoterc",
+            "columnName": "codtipoterc",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codzona",
+            "columnName": "codzona",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contacto",
+            "columnName": "contacto",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "grancontribuyente",
+            "columnName": "grancontribuyente",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "entidadestatal",
+            "columnName": "entidadestatal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nodomiciliado",
+            "columnName": "nodomiciliado",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "autoretenedor",
+            "columnName": "autoretenedor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "agenteretrenta",
+            "columnName": "agenteretrenta",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "agenteretiva",
+            "columnName": "agenteretiva",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "productos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigo` TEXT NOT NULL, `descripcion` TEXT, `codgrupo` TEXT, `codproveedor` TEXT, `unidades` TEXT, `codigobarras` TEXT, `referencia` TEXT, `peso` TEXT, `codigoexterno` TEXT, `ventascredito` TEXT, `permitedescuento` TEXT, `servicio` TEXT, `esflete` TEXT, PRIMARY KEY(`codigo`))",
+        "fields": [
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codgrupo",
+            "columnName": "codgrupo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codproveedor",
+            "columnName": "codproveedor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unidades",
+            "columnName": "unidades",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codigobarras",
+            "columnName": "codigobarras",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referencia",
+            "columnName": "referencia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "peso",
+            "columnName": "peso",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codigoexterno",
+            "columnName": "codigoexterno",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ventascredito",
+            "columnName": "ventascredito",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "permitedescuento",
+            "columnName": "permitedescuento",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "servicio",
+            "columnName": "servicio",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "esflete",
+            "columnName": "esflete",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "precios",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigo` TEXT NOT NULL, `precio01` TEXT, `precio02` TEXT, `precio03` TEXT, `precio04` TEXT, PRIMARY KEY(`codigo`))",
+        "fields": [
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio01",
+            "columnName": "precio01",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precio02",
+            "columnName": "precio02",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precio03",
+            "columnName": "precio03",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precio04",
+            "columnName": "precio04",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"edc14930cc870a844c3639bedf960f3c\")"
+    ]
+  }
+}

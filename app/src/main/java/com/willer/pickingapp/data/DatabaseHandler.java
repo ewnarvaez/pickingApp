@@ -23,7 +23,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // Client table creation
+        // ClientDao table creation
         String CREATE_CLIENT_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "("
                 + Util.KEY_CODIGO + " TEXT PRIMARY KEY, " + Util.KEY_NOMBRE +
                 " TEXT, " + Util.KEY_APELLIDOS + " TEXT, " + Util.KEY_CCNIT + " TEXT, "
