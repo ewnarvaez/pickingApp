@@ -10,6 +10,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
@@ -101,7 +102,7 @@ public class ClientRecyclerViewAdapter extends RecyclerView.Adapter<ClientRecycl
         protected FilterResults performFiltering(CharSequence charSequence) {
 
             //DatabaseHandler db = new DatabaseHandler(context.getApplicationContext());
-            List<Client> filteredList = new ArrayList<>();
+            LiveData <Client> filteredList = new ArrayList<>();
             if (charSequence.toString().isEmpty()) {
 
                 AppDatabase db = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "mayorista")

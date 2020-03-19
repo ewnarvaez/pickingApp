@@ -1,5 +1,6 @@
 package com.willer.pickingapp.Interfaces;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -14,7 +15,7 @@ public interface ClientDao {
 
     @Query("SELECT codigo, nombre, apellidos, ccnit, dv, tipodocid," +
             "empresa, regimen, naturaleza, direccion, codciudad, telefono, celular, email, estado FROM " + Client.TABLE_NAME)
-    List<Client> getAllClients();
+    LiveData <List<Client>> getAllClients();
 
     @Query("SELECT codigo, nombre, apellidos, ccnit, dv, tipodocid," +
             "empresa, regimen, naturaleza, direccion, codciudad, telefono, celular, email, estado " +

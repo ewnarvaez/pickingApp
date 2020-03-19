@@ -62,10 +62,6 @@ dependencies {
     // Adding paging
     implementation 'android.arch.paging:runtime:2.1.0'
 
-    // Adding rxJava
-    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
-    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
-
     // api rest dependencies adding android retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
